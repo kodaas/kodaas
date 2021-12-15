@@ -70,9 +70,9 @@
 
 ## 📈 STATS
 
-<p align="left">
-  <img width="35%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
-  <img width="35%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
+<p align="center">
+  <img width="45%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
+  <img width="45%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
 </p>
 <p align="center">
   <img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&theme=onedark&layout=compact" />
