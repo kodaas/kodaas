@@ -8,7 +8,7 @@
 
 ## ⚡ TECHNOLOGIES
 
-### LANGUAGE
+<!-- ### LANGUAGE -->
 
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -16,7 +16,7 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-### FRAMEWORKS, PLATFORMS & LIBRARIES
+<!-- ### FRAMEWORKS, PLATFORMS & LIBRARIES -->
 
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -58,9 +58,9 @@
  -->
 ### SOCIAL
 
-[![Linkedin Badge](https://img.shields.io/badge/-Allwell%20Onen-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kodaas/)](https://www.linkedin.com/in/kodaas/)
+[![Linkedin Badge](https://img.shields.io/badge/-Kodaas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kodaas/)](https://www.linkedin.com/in/kodaas/)
 <!-- [![Instagram Badge](https://img.shields.io/badge/-@allwells_official-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/allwells_official/)](https://instagram.com/allwells_official) -->
-[![Gmail Badge](https://img.shields.io/badge/-aleenfestus@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:johnajala204@gmail.com)](mailto:johnajala204@gmail.com)
+[![Gmail Badge](https://img.shields.io/badge/-johnajala204@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:johnajala204@gmail.com)](mailto:johnajala204@gmail.com)
 <!-- [![Website Badge](https://img.shields.io/badge/-Website-black?style=flat-square&logo=google-chrome&logoColor=white&link=https://allwells.vercel.app/)](https://allwells.vercel.app/) -->
 
 <!-- ## 💰 SUPPORT
