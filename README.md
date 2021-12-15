@@ -58,10 +58,10 @@
 
 ### SOCIAL
 
-[![Linkedin Badge](https://img.shields.io/badge/-Allwell%20Onen-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/allwells/)](https://www.linkedin.com/in/allwells/)
-[![Instagram Badge](https://img.shields.io/badge/-@allwells_official-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/allwells_official/)](https://instagram.com/allwells_official)
-[![Gmail Badge](https://img.shields.io/badge/-aleenfestus@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:aleenfestus@gmail.com)](mailto:aleenfestus@gmail.com)
-[![Website Badge](https://img.shields.io/badge/-Website-black?style=flat-square&logo=google-chrome&logoColor=white&link=https://allwells.vercel.app/)](https://allwells.vercel.app/)
+[![Linkedin Badge](https://img.shields.io/badge/-Allwell%20Onen-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kodaas/)](https://www.linkedin.com/in/kodaas/)
+<!-- [![Instagram Badge](https://img.shields.io/badge/-@allwells_official-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/allwells_official/)](https://instagram.com/allwells_official) -->
+[![Gmail Badge](https://img.shields.io/badge/-aleenfestus@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:johnajala204@gmail.com)](mailto:johnajala204@gmail.com)
+<!-- [![Website Badge](https://img.shields.io/badge/-Website-black?style=flat-square&logo=google-chrome&logoColor=white&link=https://allwells.vercel.app/)](https://allwells.vercel.app/) -->
 
 <!-- ## 💰 SUPPORT
 <p>
@@ -71,9 +71,9 @@
 ## 📈 STATS
 
 <p align="left">
-  <img width="45%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
-  <img width="45%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
+  <img width="35%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
+  <img width="35%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
 </p>
-<p align="left">
+<p align="center">
   <img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&theme=onedark&layout=compact" />
 </p>
