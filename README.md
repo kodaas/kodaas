@@ -21,41 +21,41 @@
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-### DATABASES
+<!-- ### DATABASES -->
 
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+<!-- ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) -->
 <!-- ![MySQL](https://img.shields.io/badge/mysql-E26D00.svg?style=for-the-badge&logo=mysql&logoColor=white) -->
 <!-- 
 ### ORM
 
 ![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) -->
 
-### TESTING
+<!-- ### TESTING -->
 
 <!-- ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e) -->
-![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)
+<!-- ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white) -->
 
-### OPERATING SYSTEM
+<!-- ### OPERATING SYSTEM -->
 
 <!-- ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) -->
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-
+<!-- ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) -->
+<!-- 
 ### IDEs
 
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) -->
+<!-- 
 ### VERSION CONTROL
 
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![BitBucket](https://img.shields.io/badge/-Bitbucket-blue)
-
+![BitBucket](https://img.shields.io/badge/-Bitbucket-blue) -->
+<!-- 
 ### OTHER
 
 ![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
 ![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-
+ -->
 ### SOCIAL
 
 [![Linkedin Badge](https://img.shields.io/badge/-Allwell%20Onen-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kodaas/)](https://www.linkedin.com/in/kodaas/)
@@ -71,9 +71,9 @@
 ## 📈 STATS
 
 <p align="center">
-  <img width="45%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
-  <img width="45%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
+  <img width="30%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
+  <img width="30%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
 </p>
 <p align="center">
-  <img width="45%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&theme=onedark&layout=compact" />
+  <img width="30%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&theme=onedark&layout=compact" />
 </p>
