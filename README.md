@@ -4,7 +4,7 @@
 
 <!-- I am Allwell Onen, currently pursuing my BSc in Computer Science from [Anchor University Lagos](https://aul.edu.ng/). I am a tech enthusiast. I am always open to collaborating on projects and innovative ideas. -->
 
-[![John's github activity graph](https://activity-graph.herokuapp.com/graph?username=kodaas&theme=xcode)](https://git.io/allwells)
+[![John's github activity graph](https://activity-graph.herokuapp.com/graph?username=kodaas&theme=xcode)](https://git.io/kodaas)
 
 ## ⚡ TECHNOLOGIES
 
