@@ -2,7 +2,6 @@
 
 ## Hi, I am John! Great having you here! <img src="https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif" width="30px">
 
-## It looks like i have not been commiting for some tmie now. Lets start with this. 
 
 <!-- I am Allwell Onen, currently pursuing my BSc in Computer Science from [Anchor University Lagos](https://aul.edu.ng/). I am a tech enthusiast. I am always open to collaborating on projects and innovative ideas. -->
 
