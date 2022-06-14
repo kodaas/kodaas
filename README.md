@@ -1,6 +1,6 @@
 <p align="right"> <img src="https://komarev.com/ghpvc/?username=kodaas&label=visitors%20&color=202124&style=plastic" alt="allwells" /> </p>
 
-## Hi, I am John! Great having you here! <img src="https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif" width="30px">
+## Hi, I am John! Great having you here! <img src="https://raw.githubusercontent.com/aemmadi/aemmadi/master/wave.gif" width="5px">
 
 
 <!-- I am Allwell Onen, currently pursuing my BSc in Computer Science from [Anchor University Lagos](https://aul.edu.ng/). I am a tech enthusiast. I am always open to collaborating on projects and innovative ideas. -->
