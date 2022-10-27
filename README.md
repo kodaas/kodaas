@@ -1,82 +1,90 @@
-<p align="right"> <img src="https://komarev.com/ghpvc/?username=kodaas&label=visitors%20&color=202124&style=plastic" alt="allwells" /> </p>
+<p align="right"> <img src="https://komarev.com/ghpvc/?username=kodaas&label=visitors%20&color=202124&style=plastic" alt="Kodaas" /> </p>
 
-## Hi, I am John! Great having you here! ✋
+![gitartwork](gitartwork.svg)
 
+# 🧑‍💻 Fiyinfoluwa John Ajala 
 
-<!-- I am Allwell Onen, currently pursuing my BSc in Computer Science from [Anchor University Lagos](https://aul.edu.ng/). I am a tech enthusiast. I am always open to collaborating on projects and innovative ideas. -->
+**`Digital Craftsman (Software Developer) `**
 
-<!-- [![John's github activity graph](https://activity-graph.herokuapp.com/graph?username=kodaas&theme=xcode)](https://git.io/kodaas) -->
+<p style="font-size: 1.3em"> Hi, I'm a software developer with a vision of making impact and record breaking contributions to the digital community (World 🌏), Most coding projects are built form scratch (Design-Figma / Development / and Deployment). I motivation and drive in bringing to life the impossible with Code. </p>
 
-## ⚡ TECHNOLOGIES
+## [View Protfolio](https://github.com/kodaas)
 
-<!-- ### LANGUAGE -->
+<br/>
 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-
-<!-- ### FRAMEWORKS, PLATFORMS & LIBRARIES -->
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-
-<!-- ### DATABASES -->
-
-
-<!-- ![MySQL](https://img.shields.io/badge/mysql-E26D00.svg?style=for-the-badge&logo=mysql&logoColor=white) -->
-<!-- 
-### ORM
-
-![Prisma](https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white) -->
-
-<!-- ### TESTING -->
-
-<!-- ![cypress](https://img.shields.io/badge/-cypress-%23E5E5E5?style=for-the-badge&logo=cypress&logoColor=058a5e) -->
-<!-- ![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white) -->
-
-<!-- ### OPERATING SYSTEM -->
-
-<!-- ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) -->
-<!-- ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white) -->
-<!-- 
-### IDEs
-
-![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) -->
-<!-- 
-### VERSION CONTROL
-
-
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
-![BitBucket](https://img.shields.io/badge/-Bitbucket-blue) -->
-<!-- 
-### OTHER
-
-![Babel](https://img.shields.io/badge/Babel-F9DC3e?style=for-the-badge&logo=babel&logoColor=black)
-![ESLint](https://img.shields.io/badge/ESLint-4B3263?style=for-the-badge&logo=eslint&logoColor=white)
-
- -->
-### SOCIAL
-
-[![Linkedin Badge](https://img.shields.io/badge/-Kodaas-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/kodaas/)](https://www.linkedin.com/in/kodaas/)
-<!-- [![Instagram Badge](https://img.shields.io/badge/-@allwells_official-purple?style=flat-square&logo=instagram&logoColor=white&link=https://instagram.com/allwells_official/)](https://instagram.com/allwells_official) -->
-[![Gmail Badge](https://img.shields.io/badge/-johnajala204@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:johnajala204@gmail.com)](mailto:johnajala204@gmail.com)
-<!-- [![Website Badge](https://img.shields.io/badge/-Website-black?style=flat-square&logo=google-chrome&logoColor=white&link=https://allwells.vercel.app/)](https://allwells.vercel.app/) -->
-
-<!-- ## 💰 SUPPORT
-<p>
-<a href='https://www.buymeacoffee.com/allwells' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png' border='0' alt='Support Allwell on buymecoffee' /></a>
-</p> -->
-
-## 📈 STATS
-
-<p align="center">
-  <img width="40%" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=onedark" />
-  <img width="40%" src="https://github-readme-streak-stats.herokuapp.com?user=kodaas&theme=onedark&date_format=M%20j%5B%2C%20Y%5D" />
+   <p align="left">
+   <a href="https://www.linkedin.com/in/kodaas/">
+      <img alt="Linkedin" width="32px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" />
+   </a>
+  &#8287;&#8287;&#8287;&#8287;&#8287;
+  <a href="https://twitter.com/_kodaas">
+   <img  alt="Twitter" width="32px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg" />
+  </a>
+  &#8287;&#8287;&#8287;&#8287;&#8287;
+  <a href="mailto: johnajala204@gmail.com"">
+   <img  alt="Mail" width="32px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" />
+  </a>
 </p>
-<p align="center">
-  <img width="40%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&theme=onedark&layout=compact" />
-</p>
+
+<br/>
+
+<p align="left">
+      <a href="https://github.com/DenverCoder1?tab=repositories&sort=stargazers">
+    <img alt="total stars" title="Total stars on GitHub" src="https://custom-icon-badges.demolab.com/github/stars/DenverCoder1?color=55960c&style=for-the-badge&labelColor=488207&logo=star"/></a>
+  <a href="https://github.com/DenverCoder1?tab=followers">
+    <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/kodaas?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white"/></a>
+   </p>
+
+---
+
+## 🧰 Languages and Toolbox
+
+<img align="left" alt="HTML" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
+
+<img align="left" alt="CSS" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>
+
+<img align="left" alt="Tailwind" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
+
+<img align="left" alt="Vue" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/>
+
+<img align="left" alt="React" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+
+<img align="left" alt="Figma" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/>
+
+<img align="left" alt="Express" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"/>
+
+<img align="left" alt="Mongodb" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
+
+<img align="left" alt="NodeJS" width="32px" style="padding-right:20px; padding-top: 13px; "  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+
+<img align="left" alt="Git" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+
+<img align="left" alt="TypeScript" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+
+<img align="left" alt="JavaScript" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
+
+<img align="left" alt="c" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"/>
+
+<img align="left" alt="c++" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/>
+
+
+
+<img align="left" alt="Jira" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"/>
+
+<img align="left" alt="VScode" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/>
+
+<img align="left" alt="Solidity" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg"/>
+
+<br />
+<br />
+<br />
+
+#
+
+### 📊 Stats
+
+[![GitHub Streak](https://streak-stats.demolab.com?user=kodaas&theme=onedark_duo&border_radius=15)](https://git.io/streak-stats)
+
+#
+
+## Checkout my projects 👇😉
