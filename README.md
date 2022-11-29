@@ -8,7 +8,7 @@
 
 <p style="font-size: 1.5em"> Hi, I'm a software developer with a vision of making impact and record breaking contributions to the digital community (World 🌏), Most coding projects are built form scratch (Design-Figma / Development / and Deployment). I motivation and drive in bringing to life the impossible with Code. </p>
 
-## [View Protfolio](https://github.com/kodaas)
+## [View CV](https://t.co/dMVE3FbLLq)
 
 <br/>
 
