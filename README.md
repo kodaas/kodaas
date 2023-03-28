@@ -6,10 +6,10 @@
 
 **`Digital Craftsman (Software Developer) `**
 
-<p style="font-size: 5em"> Hi 👋, I'm a software developer willing to learn and bring to life the impossible with Code while creating endless solutions and opportunities for people around me. 😉 </p>
+<h3 style="font-size: 5em"> Hi 👋, I'm a software developer willing to learn and bring to life the impossible with Code while creating endless solutions and opportunities for people around me. 😉 </h3>
 
-<p> Still building my portfolio 🏗️ <br/> 
-👇👇 but you can take a look at my resume 👌 </p>
+<h4> Still building my portfolio 🏗️ <br/> 
+👇👇 but you can take a look at my resume 👌 </h4>
 
 ## [View Resume](https://drive.google.com/file/d/19HTQV98KIoRYmbnU03pzX0ujOpsEoHZP/view?usp=share_link)
 
