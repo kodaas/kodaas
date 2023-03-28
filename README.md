@@ -6,7 +6,10 @@
 
 **`Digital Craftsman (Software Developer) `**
 
-<p style="font-size: 1.5em"> Hi, I'm a software developer with a vision of making impact and record breaking contributions to the digital community (World 🌏), Most coding projects are built form scratch (Design-Figma / Development / and Deployment). I motivation and drive in bringing to life the impossible with Code. </p>
+<p style="font-size: 5em"> Hi 👋, I'm a software developer willing to learn and bring to life the impossible with Code while creating endless solutions and opportunities for people around me. 😉 </p>
+
+<p> Still building my portfolio 🏗️ <br/> 
+👇👇 but you can take a look at my resume 👌 </p>
 
 ## [View Resume](https://drive.google.com/file/d/19HTQV98KIoRYmbnU03pzX0ujOpsEoHZP/view?usp=share_link)
 
