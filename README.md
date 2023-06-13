@@ -42,41 +42,9 @@
 
 ## 🧰 Languages and Toolbox
 
-<img align="left" alt="HTML" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/>
-
-<img align="left" alt="CSS" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/>
-
-<img align="left" alt="Tailwind" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"/>
-
-<img align="left" alt="Vue" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg"/>
-
-<img align="left" alt="React" width="32px" style="padding-right:20px; padding-top: 13px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
-
-<img align="left" alt="Figma" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"/>
-
-<img align="left" alt="Express" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"/>
-
-<img align="left" alt="Mongodb" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"/>
-
-<img align="left" alt="NodeJS" width="32px" style="padding-right:20px; padding-top: 13px; "  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
-
-<img align="left" alt="Git" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
-
-<img align="left" alt="TypeScript" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
-
-<img align="left" alt="JavaScript" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/>
-
-<img align="left" alt="c" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"/>
-
-<img align="left" alt="c++" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"/>
-
-
-
-<img align="left" alt="Jira" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"/>
-
-<img align="left" alt="VScode" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"/>
-
-<img align="left" alt="Solidity" width="32px" style="padding-right:20px; padding-top: 13px; " src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg"/>
+<h3 style="font-size: 5em"> 
+   I use optimized, cost-efficient and essential tools to solve specific problems. be it Web, Mobile, Desktop, Spatial computing, and IoT.
+</h3>
 
 <br />
 <br />
