@@ -11,7 +11,7 @@
 <h4> Still building my portfolio 🏗️ <br/> 
 👇👇 but you can take a look at my resume 👌 </h4>
 
-## [View Resume](https://drive.google.com/file/d/19HTQV98KIoRYmbnU03pzX0ujOpsEoHZP/view?usp=share_link)
+## [View Resume](https://drive.google.com/file/d/1aU8YR6VmT3inKn9HC4d_cFPfawgXOR_6/view?usp=drivesdk)
 
 <br/>
 
