@@ -1,8 +1,10 @@
-import "./globals.css";
+import "../globals.css";
 
-import { incognito } from "./assets/font/font";
-import { gitlabmono } from "./assets/font/font";
+import { incognito } from "../assets/font/font";
+import { gitlabmono } from "../assets/font/font";
 import { Inter } from "next/font/google";
+import { Providers } from "../providers";
+import { NavBar } from "../components/global/Nav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,7 +22,10 @@ export default function RootLayout({
       <body
         className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-noise bg-white dark:text-white text-zinc-700`}
       >
-        {children}
+        <Providers>
+          <NavBar />
+          <main>{children}</main>
+        </Providers>
       </body>
     </html>
   );
