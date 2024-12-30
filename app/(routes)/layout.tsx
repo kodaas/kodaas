@@ -5,6 +5,7 @@ import { gitlabmono } from "../assets/font/font";
 import { Inter } from "next/font/google";
 import { Providers } from "../providers";
 import { NavBar } from "../components/global/Nav";
+import { Footer } from "../components/global/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +25,10 @@ export default function RootLayout({
       >
         <Providers>
           <NavBar />
-          <main>{children}</main>
+          <main className="min-h-[50vh] max-w-7xl mx-auto md:px-16 px-6 pt-16 md:pt-44">
+            {children}
+          </main>
+          <Footer />
         </Providers>
       </body>
     </html>
