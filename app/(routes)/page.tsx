@@ -50,12 +50,17 @@ export default async function HomePage() {
       <ContributionGraph />
       <Job />
       <Slide className="pt-20">
-        <blockquote className="relative max-w-3xl mx-auto overflow-hidden tracking-tight text-lg my-8 lg:py-6 lg:pl-6 pr-12 p-4 border dark:border-zinc-800 border-zinc-200 rounded-md">
+        <blockquote className="relative z-0 max-w-3xl mx-auto overflow-hidden tracking-tight text-lg my-8 lg:py-6 lg:pl-6 pr-12 p-4 border dark:border-zinc-800 border-zinc-200 rounded-md">
           <BiSolidQuoteRight
             className="text-7xl absolute -top-7 -right-5 -rotate-12 dark:text-zinc-800 text-zinc-200"
             aria-hidden="true"
           />
-          <FlipWords duration={20000} words={shuffleArray(jokes).map((x) => x?.joke)} /> 😄.
+          <FlipWords
+            duration={20000}
+            className="z-0"
+            words={shuffleArray(jokes).map((x) => x?.joke)}
+          />{" "}
+          😄.
         </blockquote>
       </Slide>
     </>
