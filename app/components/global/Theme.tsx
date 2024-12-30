@@ -18,7 +18,7 @@ export default function Theme() {
 
   if (!mounted)
     return (
-      <span className="inline-block animate-pulse w-[28px] h-[28px] p-2 rounded-full dark:bg-zinc-800 bg-zinc-200 border dark:border-zinc-700 border-zinc-300"></span>
+      <span className="inline-block animate-pulse w-[40px] h-[40px] p-2 rounded-full dark:bg-zinc-800 bg-zinc-200 border dark:border-zinc-700 border-zinc-300"></span>
     );
 
   return (

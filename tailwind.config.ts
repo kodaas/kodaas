@@ -31,13 +31,18 @@ export default {
         full: "min-content 1fr",
       },
       backgroundImage: {
-        noise:
-          "url('/noise.png')",
+        noise: "url('/noise.png')",
+        "noise-reduced": "url('/noise-reduced.png')",
       },
       backgroundPosition: {
         zero: "0 0",
       },
     },
+  },
+  variants: {
+    // @ts-expect-error - Tailwind CSS types are incomplete
+    // eslint-disable-next-line
+    animation: ({ after: any }) => after(["motion-safe", "motion-reduce"]),
   },
   plugins: [],
   darkMode: "class",

@@ -6,6 +6,9 @@ import Social from "../components/shared/Social";
 import HeroSvg from "../assets/icons/HeroSvg";
 import ContributionGraph from "../components/pages/GithubCalendarComponent";
 import Job from "../components/pages/Job";
+import { BiSolidQuoteRight } from "react-icons/bi";
+import { FlipWords } from "../components/shared/FlipWord";
+import { shuffleArray } from "../utils";
 
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
@@ -18,7 +21,7 @@ export default async function HomePage() {
     tags: ["joke"],
   });
 
-  const joke = jokes[Math.floor(Math.random() * jokes.length)];
+  // const joke = jokes[Math.floor(Math.random() * jokes.length)];
 
   return (
     <>
@@ -31,7 +34,8 @@ export default async function HomePage() {
                   {data.headline}
                 </h1>
                 <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
-                  {data.shortBio} {joke?.joke}.
+                  {data.shortBio}
+                  {/*  */}
                 </p>
               </Slide>
               <Slide delay={0.1}>
@@ -45,6 +49,15 @@ export default async function HomePage() {
       </section>
       <ContributionGraph />
       <Job />
+      <Slide className="pt-20">
+        <blockquote className="relative max-w-3xl mx-auto overflow-hidden tracking-tight text-lg my-8 lg:py-6 lg:pl-6 pr-12 p-4 border dark:border-zinc-800 border-zinc-200 rounded-md">
+          <BiSolidQuoteRight
+            className="text-7xl absolute -top-7 -right-5 -rotate-12 dark:text-zinc-800 text-zinc-200"
+            aria-hidden="true"
+          />
+          <FlipWords duration={20000} words={shuffleArray(jokes).map((x) => x?.joke)} /> 😄.
+        </blockquote>
+      </Slide>
     </>
   );
 }

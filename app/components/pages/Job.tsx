@@ -42,8 +42,10 @@ export default async function Job() {
                 />
               </RefLink>
               <div className="flex flex-col items-start">
-                <h3 className="text-xl font-semibold">{data.name}</h3>
-                <p>{data.jobTitle}</p>
+                <RefLink href={data.url}>
+                  <h3 className="text-xl font-semibold">{data.name}</h3>
+                  <p>{data.jobTitle}</p>
+                </RefLink>
                 <time className="text-sm text-zinc-500 mt-2 tracking-widest uppercase">
                   {formatDate(data.startDate)} -{" "}
                   {data.endDate ? (

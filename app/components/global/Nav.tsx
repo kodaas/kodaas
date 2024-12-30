@@ -55,7 +55,7 @@ export function NavBar() {
       onFocusCapture={() => setHidden(false)}
       variants={{
         hidden: {
-          y: isMobile ? "20%" : "-71%",
+          y: isMobile ? "23%" : "-71%",
         },
 
         visible: {
