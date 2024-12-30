@@ -1,6 +1,6 @@
 import { sanityFetch } from "@/lib/sanity.client";
-import { profileQuery } from "@/lib/sanity.query";
-import { ProfileType } from "@/types";
+import { jokesQuery, profileQuery } from "@/lib/sanity.query";
+import { ProfileType, JokeType } from "@/types";
 import { Slide } from "../components/shared/Slide";
 import Social from "../components/shared/Social";
 import HeroSvg from "../assets/icons/HeroSvg";
@@ -13,6 +13,13 @@ export default async function HomePage() {
     tags: ["profile"],
   });
 
+  const jokes: JokeType[] = await sanityFetch({
+    query: jokesQuery,
+    tags: ["joke"],
+  });
+
+  const joke = jokes[Math.floor(Math.random() * jokes.length)];
+
   return (
     <>
       <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12 mb-16">
@@ -24,7 +31,7 @@ export default async function HomePage() {
                   {data.headline}
                 </h1>
                 <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
-                  {data.shortBio}
+                  {data.shortBio} {joke?.joke}.
                 </p>
               </Slide>
               <Slide delay={0.1}>

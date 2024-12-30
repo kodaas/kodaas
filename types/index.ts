@@ -46,6 +46,11 @@ export type JobType = {
   endDate: string;
 };
 
+export type JokeType = {
+  _id: string;
+  joke: string
+};
+
 export type ProjectType = {
   _id: string;
   name: string;
