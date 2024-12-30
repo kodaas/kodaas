@@ -6,6 +6,7 @@ const imageBuilder = imageUrlBuilder({
   dataset: dataset || "production",
 });
 
+// eslint-disable-next-line 
 export function urlFor(source: any) {
   return imageBuilder.image(source).auto("format").fit("max");
 }

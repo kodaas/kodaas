@@ -3,6 +3,7 @@ import { PreviewProps } from "sanity";
 import { TableValueProps } from "@/types";
 
 export function TableWidget(props: TableValueProps & PreviewProps) {
+  // eslint-disable-next-line 
   const { table, caption, title, ...rest } = props;
   const tablePreviewProps = { ...rest, rows: table?.rows || [] };
 
