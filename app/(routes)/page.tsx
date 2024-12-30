@@ -56,7 +56,7 @@ export default async function HomePage() {
             aria-hidden="true"
           />
           <FlipWords
-            duration={20000}
+            duration={12000}
             className="z-0"
             words={shuffleArray(jokes).map((x) => x?.joke)}
           />{" "}
