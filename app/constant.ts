@@ -1,24 +1,17 @@
 import {
   BiLinkExternal,
-  // BiLogoCodepen,
-  // BiLogoDribbble,
   BiLogoGithub,
-  // BiLogoGitlab,
   BiLogoInstagram,
   BiLogoLinkedinSquare,
   BiLogoStackOverflow,
-  // BiLogoSteam,
-  // BiLogoUnsplash,
   BiLogoYoutube,
 } from "react-icons/bi";
-// import { FaFreeCodeCamp, FaProductHunt } from "react-icons/fa";
-// import { SiCodewars } from "react-icons/si";
 import { FaSquareXTwitter, FaTelegram } from "react-icons/fa6";
 
 export const MOBILE_SCREEN = 767;
 
 export const SOCIALS_LINKS = [
-  {p
+  {
     id: 1,
     name: "GitHub",
     url: "https://github.com/kodaas",
@@ -138,3 +131,13 @@ export const SOCIALS_LINKS = [
   //   status: "social",
   // },
 ];
+
+export const CUSTOM_THEME = {
+  light: ["#f0f0f0", "#fde047", "#eab308", "#713f12", "#713f12"],
+  dark: ["#161b22", "#713f12", "#a16207", "#eab308", "#fde047 "],
+};
+
+export const GITHUB_THEME = {
+  light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
+  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
+};
