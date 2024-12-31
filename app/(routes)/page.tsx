@@ -11,6 +11,7 @@ import { shuffleArray } from "../utils";
 import { TbJoker } from "react-icons/tb";
 import { ToolsMarquee } from "../components/shared/ToolsMarquee";
 import Image from "next/image";
+import { Availbility } from "../components/shared/Availability";
 
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
@@ -30,6 +31,7 @@ export default async function HomePage() {
           profile.map((data) => (
             <div key={data._id} className="lg:max-w-2xl max-w-2xl">
               <Slide>
+                <Availbility />
                 <h1 className="font-incognito font-semibold tracking-tight text-3xl sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full">
                   {data.headline}
                 </h1>

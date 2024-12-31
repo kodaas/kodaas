@@ -43,7 +43,7 @@ const logosBottom = [
 ];
 
 const duration = 60;
-const size = 35;
+const size = 30;
 
 export function ToolsMarquee() {
   return (
