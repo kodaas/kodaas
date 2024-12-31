@@ -4,7 +4,7 @@ import ContributionGraph from "./ContributionGraph";
 export default function GithubCalendarComponent() {
   return (
     <section>
-      <Slide delay={0.16} className="mb-8">
+      <Slide delay={0.16} className="">
         <h2 className="font-incognito text-4xl font-bold tracking-tight">
           Contrbution Graph
         </h2>

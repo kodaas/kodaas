@@ -27,7 +27,7 @@ export default function RootLayout({
 
         <Providers>
           <NavBar />
-          <main className="min-h-[50vh] max-w-7xl mx-auto md:px-16 px-6 pt-16 md:pt-44">
+          <main className="min-h-[50vh] max-w-7xl mx-auto md:px-16 px-6 pt-16 md:pt-44 space-y-32">
             {children}
           </main>
           <Footer />
