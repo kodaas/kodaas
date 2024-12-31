@@ -9,7 +9,8 @@ import Job from "../components/pages/Job";
 import { FlipWords } from "../components/shared/FlipWord";
 import { shuffleArray } from "../utils";
 import { TbJoker } from "react-icons/tb";
-import { Marquee } from "../components/shared/Marquee";
+import { ToolsMarquee } from "../components/shared/ToolsMarquee";
+import Image from "next/image";
 
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
@@ -24,7 +25,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12">
+      <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-12 md:pt-14">
         {profile &&
           profile.map((data) => (
             <div key={data._id} className="lg:max-w-2xl max-w-2xl">
@@ -51,7 +52,7 @@ export default async function HomePage() {
       </section>
 
       <Slide className="">
-        <Marquee></Marquee>
+        <ToolsMarquee />
       </Slide>
 
       <Job />
@@ -64,12 +65,17 @@ export default async function HomePage() {
             className="text-9xl absolute -top-10 -right-8 -rotate-12 dark:text-zinc-800 text-zinc-200"
             aria-hidden="true"
           />
+          <Image
+            src="/noun-face-with-tears-of-joy-4298638.svg"
+            width={100}
+            height={100}
+            alt="smile"
+          />
           <FlipWords
             duration={12000}
             className="z-0"
             words={shuffleArray(jokes).map((x) => x?.joke)}
-          />{" "}
-          😄.
+          />
         </blockquote>
       </Slide>
     </>

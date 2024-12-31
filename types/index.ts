@@ -21,6 +21,7 @@ export type ProfileType = {
   _id: string;
   fullName: string;
   headline: string;
+  availability: boolean;
   profileImage: {
     image: string;
     lqip: string;
@@ -48,7 +49,7 @@ export type JobType = {
 
 export type JokeType = {
   _id: string;
-  joke: string
+  joke: string;
 };
 
 export type ProjectType = {

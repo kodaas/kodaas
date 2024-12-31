@@ -19,6 +19,7 @@ const postField = groq`
 export const profileQuery = groq`*[_type == "profile"]{
   _id,
   fullName,
+  availability,
   headline,
   profileImage {
     "image": asset->url,

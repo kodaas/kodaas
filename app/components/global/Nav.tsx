@@ -23,8 +23,8 @@ const links = [
     href: "/blog",
   },
   {
-    title: "Photos",
-    href: "/photos",
+    title: "Gallery",
+    href: "/gallery",
   },
 ];
 

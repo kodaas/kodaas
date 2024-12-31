@@ -16,7 +16,7 @@ export default function GithubCalendarComponent() {
 
         <Link
           href="/projects"
-          className="flex hover:text-primary-color hover:underline text-lg items-center gap-1 font-incognito"
+          className="flex hover:text-primary-color hover:underline transition-all duration-300 text-lg items-center gap-1 font-incognito"
         >
           Veiw Projects <MdKeyboardArrowRight />{" "}
         </Link>
