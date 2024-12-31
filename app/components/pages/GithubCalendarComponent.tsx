@@ -8,7 +8,7 @@ export default function GithubCalendarComponent() {
     <section>
       <Slide
         delay={0.16}
-        className="flex items-center justify-between mb-10 w-[60rem]"
+        className="flex items-end justify-between mb-10 w-[60rem]"
       >
         <h2 className="font-incognito text-4xl font-bold tracking-tight">
           Contrbution Graph
