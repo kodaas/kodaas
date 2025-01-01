@@ -12,6 +12,8 @@ import { TbJoker } from "react-icons/tb";
 import { ToolsMarquee } from "../components/shared/ToolsMarquee";
 import Image from "next/image";
 import { Availbility } from "../components/shared/Availability";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
@@ -79,6 +81,15 @@ export default async function HomePage() {
             words={shuffleArray(jokes).map((x) => x?.joke)}
           />
         </blockquote>
+
+        <div className="flex justify-evenly items-center max-w-3xl mx-auto">
+          <Link
+            href={"/projects"}
+            className="font-incognito flex items-center gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
+          >
+            My Projects <GoArrowRight />
+          </Link>
+        </div>
       </Slide>
     </>
   );

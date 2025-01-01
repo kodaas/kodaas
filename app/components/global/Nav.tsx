@@ -11,12 +11,12 @@ import { cn } from "@/app/utils";
 
 const links = [
   {
-    title: "About",
-    href: "/about",
-  },
-  {
     title: "Projects",
     href: "/projects",
+  },
+  {
+    title: "About",
+    href: "/about",
   },
   {
     title: "Blog",

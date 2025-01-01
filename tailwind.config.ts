@@ -24,7 +24,7 @@ export default {
         "line-dark": "rgb(29, 29, 32) 0px 1px 0px",
       },
       gridTemplateColumns: {
-        custom: "1.2fr 1fr",
+        custom: "1.5fr 1fr",
       },
       gridTemplateRows: {
         fit: "min-content 0fr",
