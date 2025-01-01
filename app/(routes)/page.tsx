@@ -38,7 +38,7 @@ export default async function HomePage() {
                 <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
                   Hi, I&apos;m{" "}
                   <span className="text-primary-color text-lg italic font- font-incognito">
-                    Fiyinfoluwa John Ajala
+                    {data.fullName}
                   </span>{" "}
                   (Fiyin), {data.shortBio}
                 </p>
@@ -53,7 +53,7 @@ export default async function HomePage() {
         </Slide>
       </section>
 
-      <Slide className="">
+      <Slide delay={0.16}>
         <ToolsMarquee />
       </Slide>
 
@@ -61,7 +61,7 @@ export default async function HomePage() {
 
       <ContributionGraph />
 
-      <Slide className="">
+      <Slide delay={0.22}>
         <blockquote className="relative z-0 max-w-3xl mx-auto overflow-hidden tracking-tight text-lg my-8 lg:py-6 lg:pl-6 pr-12 p-4 border dark:border-zinc-800 border-zinc-200 rounded-md">
           <TbJoker
             className="text-9xl absolute -top-10 -right-8 -rotate-12 dark:text-zinc-800 text-zinc-200"

@@ -3,8 +3,10 @@ import { jobQuery } from "@/lib/sanity.query";
 import type { JobType } from "@/types";
 import { sanityFetch } from "@/lib/sanity.client";
 import RefLink from "../shared/RefLink";
+import { PortableText } from "@portabletext/react";
 import { Slide } from "../shared/Slide";
 import { formatDate } from "@/app/utils";
+import { CustomPortableText } from "../shared/CustomPortableText";
 
 export default async function Job() {
   const job: JobType[] = await sanityFetch({
@@ -56,9 +58,15 @@ export default async function Job() {
                     </span>
                   )}
                 </time>
-                <p className="tracking-tight dark:text-zinc-400 text-zinc-600 my-4">
+                <p className="tracking-tight dark:text-zinc-400 text-zinc-600 mt-4">
                   {data.description}
                 </p>
+                <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
+                  <PortableText
+                    value={data.achievements}
+                    components={CustomPortableText}
+                  />
+                </div>
               </div>
             </div>
           ))}

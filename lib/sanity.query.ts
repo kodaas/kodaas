@@ -35,9 +35,11 @@ export const profileQuery = groq`*[_type == "profile"]{
   usage
 }`;
 
-export const jobQuery = groq`*[_type == "job"] | order(_createdAt desc){
+export const jobQuery = groq`*[_type == "job"] | order(order desc){
   _id,
   name,
+  order,
+  achievements,
   jobTitle,
   "logo": logo.asset->url,
   url,

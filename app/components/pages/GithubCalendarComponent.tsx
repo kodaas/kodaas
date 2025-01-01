@@ -7,7 +7,7 @@ export default function GithubCalendarComponent() {
   return (
     <section>
       <Slide
-        delay={0.16}
+        delay={0.2}
         className="flex items-end justify-between mb-10 max-w-[60rem]"
       >
         <h2 className="font-incognito text-4xl font-bold tracking-tight">

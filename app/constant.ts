@@ -7,6 +7,7 @@ import {
   BiLogoYoutube,
 } from "react-icons/bi";
 import { FaSquareXTwitter, FaTelegram } from "react-icons/fa6";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export const MOBILE_SCREEN = 767;
 
@@ -23,6 +24,13 @@ export const SOCIALS_LINKS = [
     name: "X",
     url: "https://x.com/_kodaas",
     icon: FaSquareXTwitter,
+    status: "social",
+  },
+  {
+    id: 2,
+    name: "WhatsApp",
+    url: "https://wa.me/+2347044896263/?text=Hi%20how%20are%20you%20doing%2C%20can%20we%20discuss%20briefly%3F",
+    icon: RiWhatsappFill,
     status: "social",
   },
   {

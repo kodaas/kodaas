@@ -39,10 +39,12 @@ export type ProfileType = {
 export type JobType = {
   _id: string;
   name: string;
+  order: number;
   jobTitle: string;
   logo: string;
   url: string;
   description: string;
+  achievements: PortableTextBlock[];
   startDate: string;
   endDate: string;
 };

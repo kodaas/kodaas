@@ -17,7 +17,6 @@ const profile = {
       name: "availability",
       title: "Your Availabiity",
       type: "boolean",
-      validation: (rule) => rule.required(),
     }),
     defineField({
       name: "headline",
