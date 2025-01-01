@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     url: "https://kodaas-mu.vercel.app/projects",
     description: "Explore projects built by Fiyinfoluwa John Ajala",
     images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
+      "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/projects-og",
   },
 };
 

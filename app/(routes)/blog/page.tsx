@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     url: "https://kodaas-mu.vercel.app/blog",
     description: "Read latest stories from Fiyinfoluwa John Ajala's Blog",
     images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png",
+      "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/blog-og",
   },
 };
 
