@@ -11,7 +11,6 @@ const inter = Inter({
   variable: "--inter",
 });
 
-
 const options = {
   title: "Fiyinfoluwa John Ajala | Software Developer",
   description:
@@ -45,8 +44,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${incognito.variable} ${inter.className} ${gitlabmono.variable}`} suppressHydrationWarning>
-      <body className={""}>{children}</body>
+    <html
+      lang="en"
+      className={`${incognito.variable} ${inter.className} ${gitlabmono.variable}`}
+      suppressHydrationWarning
+    >
+      <body>{children}</body>
     </html>
   );
 }

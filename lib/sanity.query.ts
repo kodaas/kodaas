@@ -48,9 +48,11 @@ export const jobQuery = groq`*[_type == "job"] | order(order desc){
   endDate,
 }`;
 
-export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc){
+export const projectsQuery = groq`*[_type == "project"] | order(order asc){
   _id,
   name,
+  order,
+  active,
   "slug": slug.current,
   tagline,
   "logo": logo.asset->url,

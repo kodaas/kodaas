@@ -1,7 +1,7 @@
 import { Providers } from "../providers";
 import { NavBar } from "../components/global/Nav";
 import { Footer } from "../components/global/Footer";
-
+import NextTopLoader from "nextjs-toploader";
 
 export default function RootLayout({
   children,
@@ -9,10 +9,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`dark:bg-zinc-900 motion-reduce:bg-noise-reduced bg-white dark:text-white text-zinc-700`}
       >
+        <NextTopLoader color="#fbbf24" />
         <div className="noise bg-noise"></div>
 
         <Providers>

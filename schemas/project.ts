@@ -8,6 +8,13 @@ const project = {
   type: "document",
   icon: BiPackage,
   fields: [
+    defineField({
+      name: "order",
+      title: "Oder Number",
+      type: "number",
+      description: "Input a number to order the Project",
+      validation: (rule) => rule.required(),
+    }),
     {
       name: "name",
       title: "Name",
@@ -28,6 +35,12 @@ const project = {
         "Add a custom slug for the URL or generate one from the name",
       options: { source: "name" },
     },
+    defineField({
+      name: "active",
+      title: "Projct Status",
+      description: "Is this project still active or in development?",
+      type: "boolean",
+    }),
     {
       name: "logo",
       title: "Project Logo",

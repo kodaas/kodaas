@@ -57,6 +57,8 @@ export type JokeType = {
 export type ProjectType = {
   _id: string;
   name: string;
+  active: boolean;
+  order: number;
   slug: string;
   tagline: string;
   projectUrl: string;
