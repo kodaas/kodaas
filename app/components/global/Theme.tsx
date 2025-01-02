@@ -28,6 +28,7 @@ export default function Theme() {
         currentTheme === "light" ? "-rotate-180" : "rotate-0"
       }`}
       aria-label="Toggle Theme"
+      title="Toggle Theme"
     >
       {currentTheme === "light" ? <SunIcon /> : <MoonIcon />}
     </button>

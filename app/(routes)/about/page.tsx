@@ -43,7 +43,7 @@ export default async function AboutPage() {
               <div className="order-2 lg:order-none">
                 <Slide>
                   <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
-                    Live 🛑 in {data.location}, {data.fullName} is building the
+                    Live 🛑 in {data.location}, {data.fullName}, building the
                     future.
                   </h1>
 

@@ -26,6 +26,10 @@ const links = [
     title: "Gallery",
     href: "/gallery",
   },
+  {
+    title: "AI✨",
+    href: "/ai",
+  },
 ];
 
 export function NavBar() {
@@ -65,7 +69,7 @@ export function NavBar() {
       // transition={{ duration: 0.3 }}
       className="fixed bottom-0 md:top-0 md:bottom-auto flex justify-center w-full py-3 px-2 bg-red-3 z-10"
     >
-      <nav className="flex backdrop-blur-md dark:bg-primary-bg bg-secondary-bg items-center justify-between w-full md:w-auto md:gap-12 border-2 dark:border-zinc-800 px-3 md:px-5 py-3 rounded-3xl border-zinc-200">
+      <nav className="flex shadow-line-light dark:shadow-line-dark backdrop-blur-md dark:bg-primary-bg bg-secondary-bg items-center justify-between w-full md:w-auto md:gap-12 border-2 dark:border-zinc-800 px-3 md:px-5 py-3 rounded-3xl border-zinc-200">
         <Link href={"/"}>
           <Image
             src="/logo.png"

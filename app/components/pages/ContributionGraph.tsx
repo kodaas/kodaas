@@ -45,7 +45,7 @@ export default function ContributionGraph() {
           theme={CUSTOM_THEME}
           colorScheme={serverTheme}
           blockSize={13}
-          year={calendarYear}
+          year={calendarYear ?? today}
         />
       </div>
       <div className="flex justify-start xl:flex-col flex-row flex-wrap gap-2">

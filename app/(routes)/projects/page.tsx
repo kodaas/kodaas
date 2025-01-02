@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import EmptyState from "@/app/components/shared/EmptyState";
+import { GoArrowRight } from "react-icons/go";
 
 export const metadata: Metadata = {
   title: "Project | Fiyinfoluwa John Ajala",
@@ -27,7 +28,7 @@ export default async function ProjectsPage() {
     query: projectsQuery,
     tags: ["project"],
   });
-  
+
   return (
     <>
       <section>
@@ -38,7 +39,7 @@ export default async function ProjectsPage() {
           description="A Showcase of My Projects, Reflecting Years of Learning and Growth. feel free to contribute, and let's learn together."
         />
       </section>
-      
+
       <Slide delay={0.1}>
         {projects.length > 0 ? (
           <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
@@ -74,6 +75,14 @@ export default async function ProjectsPage() {
           <EmptyState value="Projects" />
         )}
       </Slide>
+      <div className="flex mt-20 justify-evenly items-center max-w-3xl mx-auto">
+        <Link
+          href={"/about"}
+          className="font-incognito flex items-center gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
+        >
+          About Me <GoArrowRight />
+        </Link>
+      </div>
     </>
   );
 }
