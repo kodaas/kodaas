@@ -31,7 +31,7 @@ export async function Availbility() {
         "https://wa.me/+2347044896263/?text=Hi%20how%20are%20you%20doing%2C%20can%20we%20discuss%20briefly%3F"
       }
       target="_blank"
-      className="inline-flex items-center gap-2 mb-2 bg-green-50/10 text-green-500 border border-green-600 rounded-full px-1 items-center gap-2 font-incognito"
+      className="inline-flex mb-2 bg-green-50/10 text-green-500 border border-green-600 rounded-full px-1 items-center gap-2 font-incognito"
     >
       <div className="size-3 rounded-full animate-pulse bg-green-500"></div>
       Talent: Currently Available! 😎 <BiLinkExternal />

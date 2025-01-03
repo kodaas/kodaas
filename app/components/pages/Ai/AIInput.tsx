@@ -1,14 +1,16 @@
+"use client";
 import { AI_SAMPLE_QUESTIONS } from "@/app/constant";
 import { FiSend } from "react-icons/fi";
+import { Slide } from "../../shared/Slide";
 
 export function AIInput() {
   return (
-    <section className="space-y-1 w-full">
+    <Slide delay={0.2} className="space-y-1 w-full">
       <div className="flex w-full py-2 gap-3 overflow-auto no-scrollbar">
         {AI_SAMPLE_QUESTIONS.map((question, index) => (
           <button
             key={index}
-            className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed border dark:border-zinc-400 border-zinc-600 px-2 rounded-full shrink-0"
+            className="text-xs dark:text-zinc-400 text-zinc-600 leading-relaxed border dark:border-zinc-400 border-zinc-600 px-2 rounded-full shrink-0"
           >
             {question}
           </button>
@@ -29,6 +31,10 @@ export function AIInput() {
           <FiSend />
         </button>
       </form>
-    </section>
+
+      <div className="w-full text-center text-xs dark:text-zinc-400 text-zinc-600 pt-1">
+        This AI can make mistakes. Check important info.
+      </div>
+    </Slide>
   );
 }

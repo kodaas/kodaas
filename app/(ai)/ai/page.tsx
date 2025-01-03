@@ -16,20 +16,17 @@ export default async function AIChatBotPage() {
 
   if (!noMessage) {
     return (
-      <section className="bg-red- flex items-center justify-center w-full min-h-[100vh] h-[100dvh]">
+      <section className="flex items-center justify-center w-full min-h-[100vh] h-[100dvh]">
         <EmptyChat profile={profile[0]} />
       </section>
     );
   }
 
   return (
-    <section
-      id="chat"
-      className="flex flex-col gap-y-5 overflow-hidden pt-2 pb-24 md:pb-4 w-full min-h-[100vh] h-[100dvh]"
-    >
+    <section className="flex flex-col gap-y-5 overflow-hidden pt-2 pb-24 md:pb-2 w-full min-h-[100vh] h-[100dvh]">
       <AIProfileCard profile={profile[0]} />
 
-      <section className="h-[80dvh] grid items-end bg-red-30 overflow-auto px-2">
+      <section className="h-[80dvh] grid items-end overflow-auto px-2">
         <Messages />
       </section>
 

@@ -16,6 +16,8 @@ export const AI_SAMPLE_QUESTIONS = [
   "what do you do",
   "what are your plans",
   "How would you rate your skills",
+  "what are your plans",
+  "How would you rate your skills",
 ];
 
 export const SOCIALS_LINKS = [

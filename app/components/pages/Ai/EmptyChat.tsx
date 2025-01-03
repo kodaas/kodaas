@@ -1,6 +1,8 @@
+"use client";
 import { ProfileType } from "@/types";
 import Image from "next/image";
 import { AIInput } from "./AIInput";
+import { Slide } from "../../shared/Slide";
 
 type Props = {
   profile: ProfileType;
@@ -9,7 +11,7 @@ type Props = {
 export function EmptyChat({ profile }: Props) {
   return (
     <div className="w-full lg:max-w-[40rem] space-y-5 md:space-y-8">
-      <div className="text-center">
+      <Slide className="text-center">
         <Image
           src={profile.profileImage.image}
           alt={profile.profileImage.alt}
@@ -23,9 +25,10 @@ export function EmptyChat({ profile }: Props) {
         <p className="text-sm max-w-56 mx-auto">
           You can ask me anything you want to know
         </p>
-      </div>
-
-      <AIInput showRecommendation={false} />
+      </Slide>
+      <Slide delay={0.2} className="text-center">
+        <AIInput />
+      </Slide>
     </div>
   );
 }
