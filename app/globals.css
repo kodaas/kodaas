@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fbbf24;
+}
+
+.light {
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+}
+
+.dark {
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #18181b;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -11,13 +41,23 @@ body {
   background-position: 0 0;
 }
 
-git
-
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--incognito), "Inter", sans-serif;
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
 }
 
 .path {

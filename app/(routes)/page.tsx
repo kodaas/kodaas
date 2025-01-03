@@ -1,4 +1,3 @@
-
 import { sanityFetch } from "@/lib/sanity.client";
 import { jokesQuery, profileQuery } from "@/lib/sanity.query";
 import { ProfileType, JokeType } from "@/types";
