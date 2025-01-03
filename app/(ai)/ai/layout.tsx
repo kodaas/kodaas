@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { NavBar } from "@/app/components/global/Nav";
 import NextTopLoader from "nextjs-toploader";
 import { Providers } from "@/app/providers";
+import { AI } from "@/app/ai";
 
 import { incognito } from "@/app/assets/font/font";
 import { gitlabmono } from "@/app/assets/font/font";
@@ -47,16 +48,18 @@ export default function AiLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="" suppressHydrationWarning>
-      <body
-        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} bg-[length:100px_100px] md:bg-[length:200px_200px] dark:bg-zinc-900 bg-noise-reduced bg-white dark:text-white text-zinc-700`}
-      >
-        <NextTopLoader color="#fbbf24" />
-        <Providers>
-          <NavBar />
-          <main className="px-6 max-w-[40rem] mx-auto">{children}</main>
-        </Providers>
-      </body>
-    </html>
+    <AI>
+      <html lang="en" className="" suppressHydrationWarning>
+        <body
+          className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} bg-[length:100px_100px] md:bg-[length:200px_200px] dark:bg-zinc-900 bg-noise-reduced bg-white dark:text-white text-zinc-700`}
+        >
+          <NextTopLoader color="#fbbf24" />
+          <Providers>
+            <NavBar />
+            <main className="px-6 max-w-[40rem] mx-auto">{children}</main>
+          </Providers>
+        </body>
+      </html>
+    </AI>
   );
 }

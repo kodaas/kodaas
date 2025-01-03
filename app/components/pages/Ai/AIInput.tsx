@@ -2,8 +2,32 @@
 import { AI_SAMPLE_QUESTIONS } from "@/app/constant";
 import { FiSend } from "react-icons/fi";
 import { Slide } from "../../shared/Slide";
+import { FormEvent, useState } from "react";
+import { useActions, useUIState } from "ai/rsc";
+import { ClientMessage } from "@/app/actions";
+import { nanoid } from "nanoid";
 
 export function AIInput() {
+  const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { continueConversation } = useActions();
+  const [, setConversations] = useUIState();
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    setIsLoading(true);
+    e.preventDefault();
+    e.stopPropagation();
+    setConversations((prev: ClientMessage[]) => [
+      ...prev,
+      { id: nanoid(10), display: input, role: "user" },
+    ]);
+    const response = await continueConversation(input);
+    setConversations((prev: ClientMessage[]) => [...prev, response]);
+    console.log(response);
+    setInput("");
+    setIsLoading(false);
+  }
+
   return (
     <Slide delay={0.2} className="space-y-1 w-full">
       <div className="flex w-full py-2 gap-3 overflow-auto no-scrollbar">
@@ -17,15 +41,22 @@ export function AIInput() {
         ))}
       </div>
 
-      <form className="flex items-center justify-center gap-3">
+      <form
+        onSubmit={handleSubmit}
+        className="flex items-center justify-center gap-3"
+      >
         <input
           type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
           className="w-full flex-1 py-3 px-3 md:px-4 text-base border dark:border-zinc-400 border-zinc-600 rounded-full"
           placeholder="Ask a question"
+          disabled={isLoading}
         />
 
         <button
           type="submit"
+          disabled={isLoading}
           className="p-4 rounded-full bg-zinc-700 dark:bg-white text-white dark:text-zinc-700  shrink-0 text-base border dark:border-zinc-400 border-zinc-600 flex items-center justify-center"
         >
           <FiSend />

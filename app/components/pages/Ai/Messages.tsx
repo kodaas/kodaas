@@ -4,27 +4,20 @@ import Image from "next/image";
 import { AnimatedGradientText } from "../../shared/AnimatedGradientText";
 import { cn } from "@/app/utils";
 import { Slide } from "../../shared/Slide";
+import { useUIState } from "ai/rsc";
+import { ClientMessage } from "@/app/actions";
 
 export function Messages() {
   const isLoading = true;
+  const [messages] = useUIState();
 
   return (
     <div className="bg-blue-30 flex flex-col gap-8 justify-end">
-      {new Array(2).fill(
-        <>
-          <SingleMessage isUser={true}>
-            Hello dark:text-zinc-400 text-zinc-600 dark:text-zinc-400
-            text-zinc-600 v dark:text-zinc-400 text-zinc-600 dark:text-zinc-400
-            dark:text-zinc-400 text-zinc-600 dark:text-zinc-400 text-zinc-600
-            text-zinc-600World Hello
-          </SingleMessage>
-          <SingleMessage isUser={false}>
-            Hello World Hello World Hello World Hello World Hello World Hello
-            Hello World Hello World Hello World Hello World Hello World Hello
-            World
-          </SingleMessage>
-        </>,
-      )}
+      {messages.map((message: ClientMessage) => (
+        <SingleMessage key={message.id} isUser={message.role === "user"}>
+          {message.display}
+        </SingleMessage>
+      ))}
 
       {isLoading && (
         <Slide className="w-full shrink-0 flex gap-2 items-start justify-start">
@@ -62,8 +55,8 @@ function SingleMessage({
   if (isUser)
     return (
       <Slide className="w-full shrink-0 flex gap-2 items-start justify-end">
-        <div className="py-2 px-3 rounded-2xl text-xs w-auto max-w-[60%] dark:bg-zinc-800 bg-white">
-          User {children}
+        <div className="py-2 px-3 rounded-2xl text-sm w-auto max-w-[60%] dark:bg-zinc-800 bg-white">
+          {children}
         </div>
       </Slide>
     );
@@ -78,7 +71,7 @@ function SingleMessage({
         className="rounded-full mt-1 shrink-0"
       />
       <div className=" flex flex-col gap-4 text-sm rounded-tl-none w-auto max-w-[80%] leading-6">
-        AI {children}
+        {children}
       </div>
     </Slide>
   );
