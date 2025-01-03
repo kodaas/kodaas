@@ -9,7 +9,7 @@ export default async function AIChatBotPage() {
     tags: ["profile"],
   });
 
-  const noMessage = false;
+  const noMessage = true;
 
   if (noMessage) {
     return (
