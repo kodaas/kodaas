@@ -1,7 +1,6 @@
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import { NavBar } from "@/app/components/global/Nav";
-import { Footer } from "@/app/components/global/Footer";
 import NextTopLoader from "nextjs-toploader";
 import { Providers } from "@/app/providers";
 
@@ -16,7 +15,7 @@ const inter = Inter({
 });
 
 const options = {
-  title: "Fiyinfoluwa John Ajala | Software Developer",
+  title: "AI | Fiyinfoluwa John Ajala",
   description:
     "Fiyinfoluwa John Ajala is a Software Developer and an experienced frontend developer with a knack for building ideas that makes life a bit easier 🤝, one line of code at a time 💻.",
   url: "https://kodaas-mu.vercel.app/",
@@ -42,24 +41,22 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function AiLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="" suppressHydrationWarning>
       <body
         className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} bg-[length:100px_100px] md:bg-[length:200px_200px] dark:bg-zinc-900 bg-noise-reduced bg-white dark:text-white text-zinc-700`}
       >
         <NextTopLoader color="#fbbf24" />
-
         <Providers>
           <NavBar />
-          <main className="min-h-[50vh] max-w-7xl mx-auto md:px-16 px-6 pt-16 md:pt-44 space-y-32">
+          <main className="px-6 max-w-[40rem] mx-auto bg-green-nav00">
             {children}
           </main>
-          <Footer />
         </Providers>
       </body>
     </html>

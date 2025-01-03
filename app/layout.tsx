@@ -1,5 +1,4 @@
 import "./globals.css";
-
 import type { Metadata } from "next";
 import { incognito } from "./assets/font/font";
 import { gitlabmono } from "./assets/font/font";
@@ -49,7 +48,7 @@ export default function RootLayout({
       className={`${incognito.variable} ${inter.className} ${gitlabmono.variable}`}
       suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body><div className="noise bg-noise"></div>{children}</body>
     </html>
   );
 }

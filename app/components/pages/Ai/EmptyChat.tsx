@@ -25,7 +25,7 @@ export function EmptyChat({ profile }: Props) {
         </p>
       </div>
 
-      <AIInput />
+      <AIInput showRecommendation={false} />
     </div>
   );
 }
