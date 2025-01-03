@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import typography from "@tailwindcss/typography";
 
 export default {
   content: [
@@ -62,6 +63,6 @@ export default {
     // eslint-disable-next-line
     animation: ({ after: any }) => after(["motion-safe", "motion-reduce"]),
   },
-  plugins: [],
+  plugins: [typography],
   darkMode: "class",
 } satisfies Config;

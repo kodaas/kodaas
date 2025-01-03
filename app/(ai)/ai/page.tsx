@@ -26,7 +26,7 @@ export default async function AIChatBotPage() {
     <section className="flex flex-col gap-y-5 overflow-hidden pt-2 pb-24 md:pb-2 w-full min-h-[100vh] h-[100dvh]">
       <AIProfileCard profile={profile[0]} />
 
-      <section className="h-[80dvh] grid items-end overflow-auto px-2">
+      <section className="h-[80dvh] grid items-end overflow-x-hidden overflow-y-auto px-2">
         <Messages />
       </section>
 

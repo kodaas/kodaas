@@ -13,11 +13,14 @@ export function Messages() {
 
   return (
     <div className="bg-blue-30 flex flex-col gap-8 justify-end">
-      {messages.map((message: ClientMessage) => (
-        <SingleMessage key={message.id} isUser={message.role === "user"}>
-          {message.display}
-        </SingleMessage>
-      ))}
+      {messages.map((message: ClientMessage) => {
+        const isUser = message.role === "user";
+        return (
+          <SingleMessage key={message.id} isUser={isUser}>
+            {message.display}
+          </SingleMessage>
+        );
+      })}
 
       {isLoading && (
         <Slide className="w-full shrink-0 flex gap-2 items-start justify-start">
@@ -70,7 +73,7 @@ function SingleMessage({
         height={20}
         className="rounded-full mt-1 shrink-0"
       />
-      <div className=" flex flex-col gap-4 text-sm rounded-tl-none w-auto max-w-[80%] leading-6">
+      <div className="flex flex-col gap-4 text-sm rounded-tl-none w-auto max-w-[80%] leading-6">
         {children}
       </div>
     </Slide>

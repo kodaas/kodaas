@@ -11,7 +11,7 @@ export function AIInput() {
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { continueConversation } = useActions();
-  const [, setConversations] = useUIState();
+  const [conversation, setConversations] = useUIState();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     setIsLoading(true);
@@ -21,10 +21,10 @@ export function AIInput() {
       ...prev,
       { id: nanoid(10), display: input, role: "user" },
     ]);
+    setInput("");
+    console.log(conversation)
     const response = await continueConversation(input);
     setConversations((prev: ClientMessage[]) => [...prev, response]);
-    console.log(response);
-    setInput("");
     setIsLoading(false);
   }
 

@@ -56,7 +56,7 @@ export default function AiLayout({
           <NextTopLoader color="#fbbf24" />
           <Providers>
             <NavBar />
-            <main className="px-6 max-w-[40rem] mx-auto">{children}</main>
+            <main className="px-6 max-w-[45rem] mx-auto">{children}</main>
           </Providers>
         </body>
       </html>
