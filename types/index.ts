@@ -6,6 +6,8 @@ export interface Table {
   title?: string;
 }
 
+export type AiRoles = "user" | "assistant" | "error"
+
 export interface TableValueProps {
   table?: Table;
   caption?: string;

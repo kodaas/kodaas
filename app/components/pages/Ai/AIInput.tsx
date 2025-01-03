@@ -6,15 +6,16 @@ import { FormEvent, useState } from "react";
 import { useActions, useUIState } from "ai/rsc";
 import { ClientMessage } from "@/app/actions";
 import { nanoid } from "nanoid";
+import { useAIStore } from "@/app/store/ai";
 
 export function AIInput() {
   const [input, setInput] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+  const { isLoading, setLoading } = useAIStore();
   const { continueConversation } = useActions();
-  const [conversation, setConversations] = useUIState();
+  const [, setConversations] = useUIState();
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    setIsLoading(true);
+    setLoading(true);
     e.preventDefault();
     e.stopPropagation();
     setConversations((prev: ClientMessage[]) => [
@@ -22,10 +23,23 @@ export function AIInput() {
       { id: nanoid(10), display: input, role: "user" },
     ]);
     setInput("");
-    console.log(conversation)
     const response = await continueConversation(input);
     setConversations((prev: ClientMessage[]) => [...prev, response]);
-    setIsLoading(false);
+    setLoading(false);
+  }
+
+  async function handleSugestedPrompt(input: string) {
+    if (isLoading) return;
+    setLoading(true);
+    setConversations((prev: ClientMessage[]) => [
+      ...prev,
+      { id: nanoid(10), display: input, role: "user" },
+    ]);
+    setInput("");
+    const response = await continueConversation(input);
+
+    setConversations((prev: ClientMessage[]) => [...prev, response]);
+    setLoading(false);
   }
 
   return (
@@ -34,6 +48,8 @@ export function AIInput() {
         {AI_SAMPLE_QUESTIONS.map((question, index) => (
           <button
             key={index}
+            disabled={isLoading}
+            onClick={() => handleSugestedPrompt(question)}
             className="text-xs dark:text-zinc-400 text-zinc-600 leading-relaxed border dark:border-zinc-400 border-zinc-600 px-2 rounded-full shrink-0"
           >
             {question}

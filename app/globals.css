@@ -70,11 +70,11 @@ h4 {
   }
 
   .ai-text-response {
-    @apply prose-base max-w-[80%] overflow-hidden text-wrap dark:prose-a:text-blue-400 prose-a:text-blue-500 prose-a:hover:underline dark:text-white text-zinc-700;
+    @apply prose-base max-w-[100%] md:max-w-[80%] overflow-hidden text-wrap dark:prose-a:text-blue-400 prose-a:text-blue-500 prose-a:hover:underline dark:text-white text-zinc-700;
   }
-  
+
   .ai-text-response > pre {
-      @apply bg-zinc-800 text-zinc-200
+    @apply bg-zinc-800 text-zinc-200;
   }
 }
 
