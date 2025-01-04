@@ -120,7 +120,7 @@ export const CustomMarkdownComponent: Components = {
     return (
       <RefLink
         href={href!}
-        className="dark:text-blue-400 inline-block text-blue-500 hover:underline"
+        className="dark:text-blue-400 max-w-[80%] text-wrap inline-block text-blue-500 hover:underline"
       >
         {children} <BiLinkExternal className="inline" aria-hidden="true" />
       </RefLink>
@@ -174,7 +174,9 @@ export const CustomMarkdownComponent: Components = {
   li: ({ children }) => <li className="mb-4">{children}</li>,
 
   em: ({ children }) => (
-    <em className="font-incognito font-medium italic">{children}</em>
+    <em className="font-incognito text-base text-tertiary-color/80 dark:text-primary-color/80 font-medium italic">
+      {children}
+    </em>
   ),
 
   blockquote: ({ children }) => (
