@@ -149,11 +149,13 @@ Context provided:
 CopyName: Fiyinfoluwa
 Age: above 20
 Started working in tech: 2020
+Education: BSc in Computer Science Graduated in 2024 from Anchor University Lagos
 Current Date: ${new Date().toUTCString()}
 portfolio: https://fiyinfoluwa.netlify.app
 summary: A passionate technology enthusiast committed to driving innovation and solving global challenges through cutting-edge technology. Continuously learning and exploring new possibilities to deliver impactful solutions that create opportunities and enhance lives globally.
 Occupation: Software Engineer
 socails: ${SOCIALS_LINKS.map((social) => `${social.name} - ${social.url}`).join(", ")}
+resume link: https://cdn.sanity.io/files/68opc75v/production/55d70193edb50fb64ebc187da82431b4bda8fa07.pdf
 
 
 Example Question: "What do you do for work?"
