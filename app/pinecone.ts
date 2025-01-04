@@ -3,7 +3,6 @@ import { Pinecone } from "@pinecone-database/pinecone";
 const {
   PINECONE_API_KEY,
   PINECONE_EMBEDDING_MODEL,
-  // PINECONE_EMBEDDING_MODEL_INPUT_LIMIT,
   PINECONE_DB_INDEX,
   PINECONE_DB_NAMESPACE,
 } = process.env;
@@ -28,7 +27,9 @@ export async function queryPinecone(data: string) {
     });
 
     return queryResponse.matches.map((match) => match?.metadata?.text);
-  } catch (err) {
-    throw new Error(`Error querying Pinecone: ${err}`);
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  } catch (err: any) {
+    return ["Error querying Pinecone database.", err.message];
   }
 }

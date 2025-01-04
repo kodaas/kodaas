@@ -84,7 +84,7 @@ export function AIInput() {
 
         <button
           type="submit"
-          disabled={isLoading}
+          disabled={isLoading || input.length === 0}
           className="p-4 rounded-full bg-zinc-700 dark:bg-white text-white dark:text-zinc-700  shrink-0 text-base border dark:border-zinc-400 border-zinc-600 flex items-center justify-center"
         >
           <FiSend />
