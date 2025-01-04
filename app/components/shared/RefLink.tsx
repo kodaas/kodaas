@@ -15,7 +15,7 @@ export default function RefLink({
 }) {
   return (
     <Link
-      href={href + "?ref=kodaas-mu.vercel.app"}
+      href={href + "?ref=fiyinfoluwa.netlify.app"}
       rel="noopener"
       target={target}
       className={className}
