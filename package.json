@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@ai-sdk/google": "^1.0.12",
+    "@pinecone-database/pinecone": "^4.0.0",
     "@portabletext/react": "^3.2.0",
     "@sanity/code-input": "^5.1.2",
     "@sanity/image-url": "^1.1.0",

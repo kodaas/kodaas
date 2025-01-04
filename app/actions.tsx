@@ -7,6 +7,7 @@ import { AiRoles } from "@/types";
 import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import { CustomMarkdownComponent } from "./components/shared/CustomPortableText";
+import { SYSTEM_PROMPT } from "./constant";
 
 export type ServerMessage = {
   role: AiRoles;
@@ -26,9 +27,7 @@ export async function continueConversation(input: string) {
   try {
     const result = await streamUI({
       model: google("gemini-1.5-flash"),
-      system: `
-      #Output Settings
-      1. quotes, jokes and warning like response should be in md blockquote ">" `,
+      system: SYSTEM_PROMPT,
       messages: [...history.get(), { role: "user", content: input }],
       text: ({ content, done }) => {
         if (done) {
