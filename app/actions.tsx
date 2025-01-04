@@ -8,6 +8,7 @@ import Markdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
 import { CustomMarkdownComponent } from "./components/shared/CustomPortableText";
 import { SYSTEM_PROMPT } from "./constant";
+import { queryPinecone } from "./pinecone";
 
 export type ServerMessage = {
   role: AiRoles;
@@ -25,9 +26,10 @@ export async function continueConversation(input: string) {
   // const converter = new showdown.Converter();
 
   try {
+    const context = await queryPinecone(input);
     const result = await streamUI({
       model: google("gemini-1.5-flash"),
-      system: SYSTEM_PROMPT,
+      system: `${SYSTEM_PROMPT} ${context.join("\n")}`,
       messages: [...history.get(), { role: "user", content: input }],
       text: ({ content, done }) => {
         if (done) {

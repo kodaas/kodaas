@@ -7,6 +7,7 @@ import { useActions, useUIState } from "ai/rsc";
 import { ClientMessage } from "@/app/actions";
 import { nanoid } from "nanoid";
 import { useAIStore } from "@/app/store/ai";
+import { IoIosAddCircleOutline } from "react-icons/io";
 
 export function AIInput() {
   const [input, setInput] = useState("");
@@ -60,8 +61,18 @@ export function AIInput() {
 
       <form
         onSubmit={handleSubmit}
-        className="flex items-center justify-center gap-3"
+        className="flex items-center justify-between gap-2"
       >
+        <button
+          type="button"
+          disabled={isLoading}
+          onClick={() => window.location.reload()}
+          className="p-3
+          rounded-full bg-zinc-700 dark:bg-white text-white dark:text-zinc-700  shrink-0 text-base border dark:border-zinc-400 border-zinc-600 flex items-center justify-center"
+        >
+          <IoIosAddCircleOutline />
+        </button>
+
         <input
           type="text"
           value={input}

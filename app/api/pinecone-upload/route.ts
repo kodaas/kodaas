@@ -1,74 +1,75 @@
-// import { MY_INFO } from "@/app/constant";
-import { Pinecone } from "@pinecone-database/pinecone";
-import { nanoid } from "nanoid";
 
-type RawData = {
-  id: string;
-  text: string;
-};
+// // import { MY_INFO } from "@/app/constant";
+// import { Pinecone } from "@pinecone-database/pinecone";
+// import { nanoid } from "nanoid";
 
-const {
-  PINECONE_API_KEY,
-  PINECONE_EMBEDDING_MODEL,
-  // PINECONE_EMBEDDING_MODEL_INPUT_LIMIT,
-  PINECONE_DB_INDEX,
-  PINECONE_DB_NAMESPACE,
-} = process.env;
+// type RawData = {
+//   id: string;
+//   text: string;
+// };
 
-const pc = new Pinecone({ apiKey: PINECONE_API_KEY! });
-const index = pc.index(PINECONE_DB_INDEX!);
-// const LIMIT_PER_REQUEST = parseInt(PINECONE_EMBEDDING_MODEL_INPUT_LIMIT!) || 10;
+// const {
+//   PINECONE_API_KEY,
+//   PINECONE_EMBEDDING_MODEL,
+//   // PINECONE_EMBEDDING_MODEL_INPUT_LIMIT,
+//   PINECONE_DB_INDEX,
+//   PINECONE_DB_NAMESPACE,
+// } = process.env;
 
-const data: Array<RawData> = [];
+// const pc = new Pinecone({ apiKey: PINECONE_API_KEY! });
+// const index = pc.index(PINECONE_DB_INDEX!);
+// // const LIMIT_PER_REQUEST = parseInt(PINECONE_EMBEDDING_MODEL_INPUT_LIMIT!) || 10;
 
-export async function GET() {
-  // formatData(MY_INFO.replaceAll("\n", "")).forEach((item) => data.push(item));
+// const data: Array<RawData> = [];
 
-  const dataParts = data.slice(40, 50);
+// export async function GET() {
+//   // formatData(MY_INFO.replaceAll("\n", "")).forEach((item) => data.push(item));
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const embeddings: Array<any> = await getEmbeddings(dataParts);
+//   const dataParts = data.slice(40, 50);
 
-  const records = dataParts.map((d, i) => ({
-    id: d.id,
-    values: embeddings[i].values,
-    metadata: { text: d.text },
-  }));
+//   // eslint-disable-next-line @typescript-eslint/no-explicit-any
+//   const embeddings: Array<any> = await getEmbeddings(dataParts);
 
-  await index.namespace(PINECONE_DB_NAMESPACE!).upsert(records);
+//   const records = dataParts.map((d, i) => ({
+//     id: d.id,
+//     values: embeddings[i].values,
+//     metadata: { text: d.text },
+//   }));
 
-  return Response.json({
-    message: "Data inserted successfully!",
-    data: dataParts,
-  });
-}
+//   await index.namespace(PINECONE_DB_NAMESPACE!).upsert(records);
 
-function formatData(content: string): Array<RawData> {
-  const data: Array<RawData> = [];
-  const numChars = 300;
+//   return Response.json({
+//     message: "Data inserted successfully!",
+//     data: dataParts,
+//   });
+// }
 
-  const contentArray: string[] = [];
+// function formatData(content: string): Array<RawData> {
+//   const data: Array<RawData> = [];
+//   const numChars = 300;
 
-  for (let i = 0; i < content.length; i += numChars) {
-    contentArray.push(content.substring(i, i + numChars));
-  }
+//   const contentArray: string[] = [];
 
-  contentArray.forEach((text) => {
-    const item: RawData = {
-      id: nanoid(12),
-      text,
-    };
+//   for (let i = 0; i < content.length; i += numChars) {
+//     contentArray.push(content.substring(i, i + numChars));
+//   }
 
-    data.push(item);
-  });
+//   contentArray.forEach((text) => {
+//     const item: RawData = {
+//       id: nanoid(12),
+//       text,
+//     };
 
-  return data;
-}
+//     data.push(item);
+//   });
 
-async function getEmbeddings(data: Array<RawData>) {
-  return await pc.inference.embed(
-    PINECONE_EMBEDDING_MODEL!,
-    data.map((d) => d.text),
-    { inputType: "passage", truncate: "END" },
-  );
-}
+//   return data;
+// }
+
+// async function getEmbeddings(data: Array<RawData>) {
+//   return await pc.inference.embed(
+//     PINECONE_EMBEDDING_MODEL!,
+//     data.map((d) => d.text),
+//     { inputType: "passage", truncate: "END" },
+//   );
+// }
