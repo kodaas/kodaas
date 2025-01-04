@@ -1,4 +1,3 @@
-
 // // import { MY_INFO } from "@/app/constant";
 // import { Pinecone } from "@pinecone-database/pinecone";
 // import { nanoid } from "nanoid";
@@ -73,3 +72,10 @@
 //     { inputType: "passage", truncate: "END" },
 //   );
 // }
+
+export async function GET() {
+  return Response.json({
+    message: "Data inserted successfully!",
+    data: "dataParts",
+  });
+}
