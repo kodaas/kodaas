@@ -4,10 +4,10 @@ import { NavBar } from "@/app/components/global/Nav";
 import NextTopLoader from "nextjs-toploader";
 import { Providers } from "@/app/providers";
 import { AI } from "@/app/ai";
-
 import { incognito } from "@/app/assets/font/font";
 import { gitlabmono } from "@/app/assets/font/font";
 import { Inter } from "next/font/google";
+import "highlight.js/styles/atom-one-dark.css";
 
 const inter = Inter({
   subsets: ["latin"],

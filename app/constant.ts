@@ -13,9 +13,9 @@ import { RiWhatsappFill } from "react-icons/ri";
 export const MOBILE_SCREEN = 767;
 
 export const AI_SAMPLE_QUESTIONS = [
-  "what do you do",
-  "what are your plans",
-  "How would you rate your skills",
+  "Write a link to learn HTML",
+  "Write a simple JS an Python code with 10 lines and no comment",
+  "Tell me a Joke",
   "what are your plans",
   "How would you rate your skills",
 ];

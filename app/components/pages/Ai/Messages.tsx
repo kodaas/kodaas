@@ -7,6 +7,7 @@ import { useUIState } from "ai/rsc";
 import { ClientMessage } from "@/app/actions";
 import { useAIStore } from "@/app/store/ai";
 import { AiRoles } from "@/types";
+import Balancer from "react-wrap-balancer";
 
 export function Messages() {
   const [messages] = useUIState();
@@ -17,7 +18,7 @@ export function Messages() {
       {messages.map((message: ClientMessage) => {
         return (
           <SingleMessage key={message.id} role={message.role}>
-            {message.display}
+            <Balancer>{message.display}</Balancer>
           </SingleMessage>
         );
       })}
@@ -74,7 +75,7 @@ function SingleMessage({
             alt="User"
             width={20}
             height={20}
-            className="rounded-full mt-6 shrink-0"
+            className="rounded-full mt-1 shrink-0"
           />
           <div className="flex flex-col gap-4 text-sm rounded-tl-none w-auto max-w-[80%] leading-6">
             {children}

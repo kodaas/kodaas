@@ -37,6 +37,7 @@ export function AIInput() {
     ]);
     setInput("");
     const response = await continueConversation(input);
+    console.log(response.display);
 
     setConversations((prev: ClientMessage[]) => [...prev, response]);
     setLoading(false);
