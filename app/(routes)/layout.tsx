@@ -19,7 +19,7 @@ const options = {
   title: "Fiyinfoluwa John Ajala | Software Developer",
   description:
     "Fiyinfoluwa John Ajala is a Software Developer and an experienced frontend developer with a knack for building ideas that makes life a bit easier 🤝, one line of code at a time 💻.",
-  url: "https://kodaas-mu.vercel.app/",
+  url: "https://fiyinfoluwa.netlify.app/",
   ogImage:
     "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/og",
 };

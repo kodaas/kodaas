@@ -12,15 +12,16 @@ import Usage from "@/app/components/pages/Usage";
 import { BiEnvelope, BiLinkExternal, BiSolidDownload } from "react-icons/bi";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import { RiWhatsappFill } from "react-icons/ri";
 
 export const metadata: Metadata = {
   title: "About | Fiyinfoluw John Ajala",
-  metadataBase: new URL("https://kodaas-mu.vercel.app/about"),
+  metadataBase: new URL("https://fiyinfoluwa.netlify.app/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
     title: "About | Fiyinfoluw John Ajala",
-    url: "https://kodaas-mu.vercel.app/about",
+    url: "https://fiyinfoluwa.netlify.app/about",
     description:
       "Learn more about my skills, experience and technical background",
     images:
@@ -91,13 +92,24 @@ export default async function AboutPage() {
                         </a>
                       </div>
 
-                      <a
-                        href={`mailto:${data.email}`}
-                        className="flex items-center gap-x-2 hover:text-primary-color"
-                      >
-                        <BiEnvelope className="text-lg" />
-                        {data.email}
-                      </a>
+                      <div className="flex items-center gap-4">
+                        <a
+                          href={`mailto:${data.email}`}
+                          className="flex items-center gap-x-2 hover:text-primary-color"
+                        >
+                          <BiEnvelope className="text-lg" />
+                          {data.email}
+                        </a>
+
+                        <a
+                          href="https://wa.me/+2347044896263/?text=Hi%20how%20are%20you%20doing%2C%20can%20we%20discuss%20briefly%3F"
+                          target="_blank"
+                          className="flex items-center gap-x-2 hover:text-primary-color"
+                        >
+                          <RiWhatsappFill className="text-lg" />
+                          Whatsapp
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </Slide>
