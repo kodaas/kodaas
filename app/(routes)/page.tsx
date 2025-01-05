@@ -14,6 +14,7 @@ import Image from "next/image";
 import { Availbility } from "../components/shared/Availability";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
+import { Testimonials } from "../components/pages/Testimonials";
 
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
@@ -62,6 +63,8 @@ export default async function HomePage() {
       <Job />
 
       <ContributionGraph />
+      
+      <Testimonials />
 
       <Slide delay={0.22}>
         <blockquote className="relative z-0 max-w-3xl mx-auto overflow-hidden tracking-tight text-lg my-8 lg:py-6 lg:pl-6 pr-12 p-4 border dark:border-zinc-800 border-zinc-200 rounded-md">

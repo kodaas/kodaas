@@ -33,7 +33,7 @@ export default async function Job() {
             >
               <RefLink
                 href={data.url}
-                className="grid place-items-center dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 min-h-[80px] min-w-[80px] p-2 rounded-md overflow-clip relative"
+                className="grid place-items-center dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 min-h-[80px] min-w-[80px] p-2 rounded-xl overflow-clip relative"
               >
                 <Image
                   src={data.logo}

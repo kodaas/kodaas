@@ -9,6 +9,7 @@ import { table } from "./table";
 import blockContent from "./blockContent";
 import quiz from "./quiz";
 import joke from "./heroJokes";
+import testimonials from "./testimonials";
 
 export const schemaTypes = [
   profile,
@@ -16,6 +17,7 @@ export const schemaTypes = [
   project,
   post,
   author,
+  testimonials,
   heroe,
   joke,
 

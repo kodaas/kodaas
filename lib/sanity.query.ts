@@ -110,3 +110,18 @@ export const singlePostQuery = groq`*[_type == "Post" && slug.current == $slug][
 }`;
 
 export const heroesQuery = groq`*[_type == "heroe"] | order(_createdAt asc) { _id, _createdAt, name, url, met }`;
+
+export const testimonialQuery = groq`*[_type == "testimonial"] | order(_createdAt asc) {
+  _id,
+  _createdAt,
+  name,
+  role,
+  profileImage {
+    "image": asset->url,
+    "lqip": asset->metadata.lqip,
+    alt,
+  }, 
+  handle,  
+  url, 
+  quotet 
+}`;

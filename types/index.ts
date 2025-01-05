@@ -6,7 +6,7 @@ export interface Table {
   title?: string;
 }
 
-export type AiRoles = "user" | "assistant" | "error"
+export type AiRoles = "user" | "assistant" | "error";
 
 export interface TableValueProps {
   table?: Table;
@@ -108,4 +108,18 @@ export type HeroeType = {
   name: string;
   url: string;
   met: boolean;
+};
+
+export type TestimonialType = {
+  _id: string;
+  name: string;
+  role: string;
+  handle: boolean;
+  profileImage: {
+    image: string;
+    lqip: string;
+    alt: string;
+  };
+  url: string;
+  quotet: string;
 };
