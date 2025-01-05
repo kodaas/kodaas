@@ -16,12 +16,12 @@ import { RiWhatsappFill } from "react-icons/ri";
 
 export const metadata: Metadata = {
   title: "About | Fiyinfoluw John Ajala",
-  metadataBase: new URL("https://fiyinfoluwa.netlify.app/about"),
+  metadataBase: new URL("https://kodaas-mu.vercel.app/about"),
   description:
     "Learn more about my skills, experience and technical background",
   openGraph: {
     title: "About | Fiyinfoluw John Ajala",
-    url: "https://fiyinfoluwa.netlify.app/about",
+    url: "https://kodaas-mu.vercel.app/about",
     description:
       "Learn more about my skills, experience and technical background",
     images:

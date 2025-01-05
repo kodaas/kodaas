@@ -152,7 +152,7 @@ Age: above 20
 Started working in tech: 2020
 Education: BSc in Computer Science Graduated in 2024 from Anchor University Lagos
 Current Date: ${new Date().toUTCString()}
-portfolio: https://fiyinfoluwa.netlify.app
+portfolio: https://kodaas-mu.vercel.app
 note: Fiyinfoluwa built over two dozen web applications and softwares during freelancing 
 note: my Profioio AI project is spelled "Portfolio" can can correct other spelling only when you are 100% sure and it's not like a name
 summary: A passionate technology enthusiast committed to driving innovation and solving global challenges through cutting-edge technology. Continuously learning and exploring new possibilities to deliver impactful solutions that create opportunities and enhance lives globally.
