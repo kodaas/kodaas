@@ -63,10 +63,18 @@ export default async function HomePage() {
       <Job />
 
       <ContributionGraph />
-      
+
       <Testimonials />
 
       <Slide delay={0.22}>
+        <Slide delay={0.16}>
+          <div className="mb-10">
+            <h2 className="font-incognito text-center text-4xl mb-4 font-bold tracking-tight">
+              Jokes
+            </h2>
+          </div>
+        </Slide>
+
         <blockquote className="relative z-0 max-w-3xl mx-auto overflow-hidden tracking-tight text-lg my-8 lg:py-6 lg:pl-6 pr-12 p-4 border dark:border-zinc-800 border-zinc-200 rounded-md">
           <TbJoker
             className="text-9xl absolute -top-10 -right-8 -rotate-12 dark:text-zinc-800 text-zinc-200"

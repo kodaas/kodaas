@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import RefLink from "./RefLink";
+import { MILI_SEC_FOR_A_WORD } from "@/app/constant";
 
 export const AnimatedTestimonials = ({
   testimonials,
@@ -27,12 +28,15 @@ export const AnimatedTestimonials = ({
     return index === active;
   };
 
+  const duration = () =>
+    MILI_SEC_FOR_A_WORD * testimonials[active].quotet.split(" ").length;
+
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 10000);
+      const interval = setInterval(handleNext, duration());
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, duration]);
 
   const randomRotateY = () => {
     return Math.floor(Math.random() * 28) - 15;
@@ -72,7 +76,7 @@ export const AnimatedTestimonials = ({
                     duration: 0.4,
                     ease: "easeInOut",
                   }}
-                  className="absolute inset-0 origin-bottom"
+                  className="absolute z-0 inset-0 origin-bottom"
                 >
                   <Image
                     src={testimonial.profileImage.image}
@@ -112,7 +116,7 @@ export const AnimatedTestimonials = ({
             }}
           >
             <h3 className="text-3xl font-bold dark:text-white text-black">
-              {testimonials[active].name}
+              {testimonials[active].name} {duration()}
             </h3>
             <p className="text-base mb-1 text-gray-500 dark:text-zinc-200">
               {testimonials[active].role}
