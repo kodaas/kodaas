@@ -62,6 +62,7 @@ export type ProjectType = {
   active: boolean;
   order: number;
   slug: string;
+  _updatedAt: string;
   tagline: string;
   projectUrl: string;
   repository: string;

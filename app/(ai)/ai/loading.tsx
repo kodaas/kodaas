@@ -10,6 +10,7 @@ export default function Loading() {
         height={50}
         src={duckImage}
         alt="Yellow duck searching"
+        unoptimized
       />
     </section>
   );

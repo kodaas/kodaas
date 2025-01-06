@@ -1,10 +1,11 @@
 import Image from "next/image";
 import duckImage from "@/public/searching-duck.gif";
 import FeaturedPosts from "../pages/FeaturedPosts";
+import { ReactNode } from "react";
 
 type props = {
   title: string;
-  description: string;
+  description: string | ReactNode;
 };
 
 export default function NotFoundComponent({ title, description }: props) {
@@ -15,6 +16,7 @@ export default function NotFoundComponent({ title, description }: props) {
           width={80}
           height={80}
           src={duckImage}
+          unoptimized
           alt="Yellow duck searching"
         />
         <h1 className="font-incognito font-black tracking-tight sm:text-6xl text-3xl lg:leading-[3.7rem] leading-tight mt-6 mb-3">

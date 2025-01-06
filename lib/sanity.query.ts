@@ -53,6 +53,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(order asc){
   name,
   order,
   active,
+  _updatedAt,
   "slug": slug.current,
   tagline,
   "logo": logo.asset->url,
@@ -80,6 +81,7 @@ export const jokesQuery = groq`*[_type == "joke"] | order(_createdAt desc){
 export const postsQuery = groq`*[_type == "Post"] | order(_createdAt desc){
   ${postField},
   date,
+  _updatedAt,
   "author": author-> {
     name,
     photo,

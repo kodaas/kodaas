@@ -17,6 +17,7 @@ export default function EmptyState({ value, title, icon, message }: stateType) {
             width={80}
             height={80}
             src={duckImage}
+            unoptimized
             alt="Yellow duck searching"
           />
         )}
