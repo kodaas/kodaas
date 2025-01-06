@@ -49,8 +49,8 @@ export default {
       },
 
       backgroundImage: {
-        noise: "url('/noise.png')",
-        "noise-reduced": "url('/noise-reduced.png')",
+        noise: "url('/noise.webp')",
+        "noise-reduced": "url('/noise-reduced.webp')",
       },
 
       backgroundPosition: {

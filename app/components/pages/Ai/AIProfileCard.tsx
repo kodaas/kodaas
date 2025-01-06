@@ -13,7 +13,7 @@ export function AIProfileCard({ profile }: Props) {
       className="shrink-0 gap-2 inline-flex mx-auto items-center justify-center px-3 py-2 bg-white shadow-line-light dark:shadow-line-dark rounded-3xl dark:bg-black md:mt-24"
     >
       <Image
-        src="/logo.png"
+        src="/logo.webp"
         alt="User"
         width={30}
         height={30}

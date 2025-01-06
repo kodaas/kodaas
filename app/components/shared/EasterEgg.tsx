@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import funImage from "@/public/yeah-right.png";
+import funImage from "@/public/yeah-right.webp";
 import { BiCheckbox, BiSolidCheckboxChecked } from "react-icons/bi";
 
 export default function EasterEgg({ isMet }: { isMet: boolean }) {

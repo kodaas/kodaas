@@ -1,5 +1,5 @@
 import Image from "next/image";
-import sanitylogo from "@/public/sanity.png";
+import sanitylogo from "@/public/sanity.webp";
 import vercellogo from "@/public/vercel.svg";
 import nextjslogo from "@/public/nextjs.svg";
 import { BiLogoGithub } from "react-icons/bi";

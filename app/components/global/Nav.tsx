@@ -72,7 +72,7 @@ export function NavBar() {
       <nav className="flex shadow-line-light dark:shadow-line-dark backdrop-blur-md dark:bg-primary-bg bg-secondary-bg items-center justify-between w-full md:w-auto md:gap-12 border-2 dark:border-zinc-800 px-3 md:px-5 py-3 rounded-3xl border-zinc-200">
         <Link href={"/"}>
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Logo"
             width={40}
             height={40}
