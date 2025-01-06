@@ -19,6 +19,7 @@
     "@tabler/icons-react": "^3.26.0",
     "@types/react-scroll-to-bottom": "^4.2.5",
     "@uidotdev/usehooks": "^2.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "ai": "^4.0.24",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
