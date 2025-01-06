@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Gallery | Fiyinfoluwa John Ajala",
     url: "https://kodaas-mu.vercel.app/gallery",
-    description: "Explore photos taken by Fiyinfoluwa John Ajala",
+    description: "Capturing Life's Moments & Creating Lasting Memories",
     images:
       "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/gallery-og",
   },
