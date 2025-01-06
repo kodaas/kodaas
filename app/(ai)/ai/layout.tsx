@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import { NavBar } from "@/app/components/global/Nav";
@@ -53,6 +54,7 @@ export default function AiLayout({
         <body
           className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} bg-[length:100px_100px] md:bg-[length:200px_200px] dark:bg-zinc-900 bg-noise-reduced bg-white dark:text-white text-zinc-700`}
         >
+          <SpeedInsights />
           <NextTopLoader color="#fbbf24" />
           <Providers>
             <NavBar />

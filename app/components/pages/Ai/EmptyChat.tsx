@@ -11,6 +11,9 @@ type Props = {
 export function EmptyChat({ profile }: Props) {
   return (
     <div className="w-full lg:max-w-[40rem] space-y-5 md:space-y-8">
+      <p className="text-wrap w-[30vw]">
+        {JSON.stringify(profile.profileImage.image)}
+      </p>
       <Slide className="text-center">
         <Image
           src={profile.profileImage.image}
