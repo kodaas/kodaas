@@ -14,8 +14,8 @@ export async function Testimonials() {
     <section>
       <Slide delay={0.16}>
         <div className="mb-5">
-          <h2 className="font-incognito text-center text-4xl mb-4 font-bold tracking-tight">
-            Testimonials
+          <h2 className="font-incognito text-center md:text-left text-4xl mb-4 font-bold tracking-tight">
+            Word on the Street
           </h2>
         </div>
       </Slide>
