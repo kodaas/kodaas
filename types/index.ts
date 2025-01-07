@@ -115,7 +115,7 @@ export type TestimonialType = {
   _id: string;
   name: string;
   role: string;
-  handle: boolean;
+  handle: string;
   profileImage: {
     image: string;
     lqip: string;

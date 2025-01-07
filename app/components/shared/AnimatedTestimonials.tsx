@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import RefLink from "./RefLink";
 import { MILI_SEC_FOR_A_WORD } from "@/app/constant";
+import Favicon from "@/lib/favicon";
 
 export const AnimatedTestimonials = ({
   testimonials,
@@ -43,7 +44,7 @@ export const AnimatedTestimonials = ({
     return Math.floor(Math.random() * 28) - 15;
   };
   return (
-    <div className="max-w-sm md:max-w-6xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
+    <div className="max-w-sm md:max-w-7xl mx-auto antialiased font-sans px-4 md:px-8 lg:px-12 py-20">
       <div className="relative grid grid-cols-1 mx-auto md:grid-cols-3 gap-20 md:gap-28">
         <div>
           <div className="relative h-80 w-full">
@@ -123,9 +124,10 @@ export const AnimatedTestimonials = ({
               {testimonials[active].role}
             </p>
             <RefLink
-              className="text-sm dark:text-blue-400 max-w-[80%] text-wrap inline-block text-blue-500 hover:underline"
+              className="font-medium inline-flex items-center justify-start gap-x-2 dark:text-blue-400 text-blue-500 hover:underline"
               href={testimonials[active].url}
             >
+              <Favicon domain={testimonials[active].url} alt={"🔗"} />
               {testimonials[active].handle}
             </RefLink>
 
