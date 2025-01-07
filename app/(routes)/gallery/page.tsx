@@ -1,3 +1,4 @@
+import { GalleryImageGrid } from "@/app/components/pages/GalleryImageGrid";
 import PageHeading from "@/app/components/shared/PageHeading";
 import { Metadata } from "next";
 
@@ -21,6 +22,8 @@ export default function GalleryPage() {
         title="Gallery"
         description="Capturing Life's Moments & Creating Lasting Memories"
       />
+
+      <GalleryImageGrid />
     </>
   );
 }
