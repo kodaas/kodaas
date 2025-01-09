@@ -154,10 +154,15 @@ Started working in tech: 2020
 Education: BSc in Computer Science Graduated in 2024 from Anchor University Lagos, Looking forward to Msc in CLoud Computing and AI.
 Intrest: AI, Cloud, AR/VR, Robotics, Quantum computing etc.
 Current Date: ${new Date().toUTCString()}
-portfolio: https://kodaas-mu.vercel.app
 summary: A passionate technology enthusiast committed to driving innovation and solving global challenges through cutting-edge technology. Continuously learning and exploring new possibilities to deliver impactful solutions that create opportunities and enhance lives globally.
 Occupation: Software Engineer
 socails: ${SOCIALS_LINKS.map((social) => `${social.name} - ${social.url}`).join(", ")}
+
+portfolio: https://kodaas-mu.vercel.app
+Portfolio Projects: https://kodaas-mu.vercel.app/projects
+Portfolio Blog: https://kodaas-mu.vercel.app/blog
+Portfolio Gallery: https://kodaas-mu.vercel.app/gallery
+Portfolio About: https://kodaas-mu.vercel.app/about
 
 
 Example Question: "What do you do for work?"
