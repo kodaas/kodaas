@@ -1,33 +1,12 @@
-import { GalleryItem } from "./GallerItem";
+// import { GalleryItem } from "./GalleryItem";
 
 export function GalleryImageGrid() {
-  const images = TestData(40);
-
-  const third = Math.ceil(images.length / 3);
-
-  const firstPart = images.slice(0, third);
-  const secondPart = images.slice(third, 2 * third);
-  const thirdPart = images.slice(2 * third);
-
   return (
     <section className="grid grid-cols-3 gap-1 min-h-screen">
-      <div className="grid auto-rows-[10px]">
-        {firstPart.map((data, index) => (
-          <GalleryItem index={index} col={0} key={index} data={data} />
-        ))}
-      </div>
-
-      <div className="grid auto-rows-[10px]">
-        {secondPart.map((data, index) => (
-          <GalleryItem index={index} col={1} key={index} data={data} />
-        ))}
-      </div>
-
-      <div className="grid auto-rows-[10px]">
-        {thirdPart.map((data, index) => (
-          <GalleryItem index={index} col={2} key={index} data={data} />
-        ))}
-      </div>
+      {/* {TestData(40).map((data, index) => (
+        <GalleryItem index={index} col={0} key={index} data={data} />
+      ))} */}
+      Gallery
     </section>
   );
 }

@@ -27,8 +27,9 @@ export async function continueConversation(input: string) {
 
   try {
     const context = await queryPinecone(input);
+
     const result = await streamUI({
-      model: google("gemini-1.5-flash"),
+      model: google("gemini-1.5-flash-8b"),
       system: `${SYSTEM_PROMPT} ${context.join("\n")}`,
       messages: [...history.get(), { role: "user", content: input }],
       text: ({ content, done }) => {
@@ -39,7 +40,7 @@ export async function continueConversation(input: string) {
           ]);
         }
 
-        // return <div>{content}</div>;
+        return <div>{content}</div>;
         return (
           <Markdown
             rehypePlugins={[rehypeHighlight]}
