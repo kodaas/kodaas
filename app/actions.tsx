@@ -40,7 +40,7 @@ export async function continueConversation(input: string) {
           ]);
         }
 
-        return <div>{content}</div>;
+        // return <div>{content}</div>;
         return (
           <Markdown
             rehypePlugins={[rehypeHighlight]}

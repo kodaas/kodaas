@@ -37,12 +37,12 @@ export function AIInput() {
       { id: nanoid(10), display: input, role: "user" },
     ]);
 
-    console.log(input);
+    // console.log(input);
 
     setInput("");
     const response = await continueConversation(input);
 
-    console.log("response: ", response);
+    // console.log("response: ", response);
 
     setConversations((prev: ClientMessage[]) => [...prev, response]);
     setLoading(false);
