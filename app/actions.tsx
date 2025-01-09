@@ -29,7 +29,8 @@ export async function continueConversation(input: string) {
     const context = await queryPinecone(input);
 
     const result = await streamUI({
-      model: google("gemini-1.5-flash-8b"),
+      model: google("gemini-2.0-flash-exp"),
+      temperature: 1.35,
       system: `${SYSTEM_PROMPT} ${context.join("\n")}`,
       messages: [...history.get(), { role: "user", content: input }],
       text: ({ content, done }) => {
