@@ -20,7 +20,7 @@ export async function queryPinecone(data: string) {
     );
 
     const queryResponse = await index.namespace(PINECONE_DB_NAMESPACE!).query({
-      topK: 15,
+      topK: 21,
       vector: queryEmbedding[0].values!,
       includeValues: false,
       includeMetadata: true,
