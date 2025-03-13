@@ -120,7 +120,7 @@ export const CustomMarkdownComponent: Components = {
     return (
       <RefLink
         href={href!}
-        className="dark:text-blue-400 max-w-[80%] text-wrap inline-block text-blue-500 hover:underline"
+        className="dark:text-blue-400 max-w-[80%] text-wrap overflow-hidden inline-block text-blue-500 hover:underline"
       >
         {children} <BiLinkExternal className="inline" aria-hidden="true" />
       </RefLink>

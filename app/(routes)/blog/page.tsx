@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <div>
-      <h1>Blog Page</h1>
+      <h1>Blog Page WIP 🏗️🚧</h1>
     </div>
   );
 }

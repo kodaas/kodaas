@@ -6,7 +6,7 @@ export function GalleryImageGrid() {
       {/* {TestData(40).map((data, index) => (
         <GalleryItem index={index} col={0} key={index} data={data} />
       ))} */}
-      Gallery
+      Gallery WIP 🏗️🚧
     </section>
   );
 }
