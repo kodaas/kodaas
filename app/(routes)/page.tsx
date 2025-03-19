@@ -1,6 +1,6 @@
 import { sanityFetch } from "@/lib/sanity.client";
 import { jokesQuery, profileQuery } from "@/lib/sanity.query";
-import { ProfileType, JokeType } from "@/types";
+import { JokeType, ProfileType } from "@/types";
 import { Slide } from "../components/shared/Slide";
 import Social from "../components/shared/Social";
 import HeroSvg from "../assets/icons/HeroSvg";
@@ -40,9 +40,12 @@ export default async function HomePage() {
                 </h1>
                 <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
                   Hi, I&apos;m{" "}
-                  <span className="text-primary-color text-lg italic font- font-incognito">
+                  <Link
+                    href="/ai"
+                    className="text-primary-color hover:underline text-lg italic font-incognito"
+                  >
                     {data.fullName}
-                  </span>{" "}
+                  </Link>{" "}
                   (Fiyin), {data.shortBio}
                 </p>
               </Slide>
