@@ -49,9 +49,9 @@ export default function CodeBlock({ value }: codeTypes) {
         <Clipoboard content={value.code} />
       </div>
       <Refractor
-        language={value.language ?? "jsx"}
+        language={value.language ?? "ts"}
         value={value.code}
-        className="text-sm border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal"
+        className="text-sm p-5 border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal"
       />
     </div>
   );
