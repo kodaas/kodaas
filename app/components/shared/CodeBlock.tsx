@@ -43,15 +43,17 @@ type codeTypes = {
 
 export default function CodeBlock({ value }: codeTypes) {
   return (
-    <div className="my-6">
-      <div className="flex items-center justify-between bg-zinc-50 dark:bg-[#141414] border dark:border-zinc-800 border-zinc-200 rounded-t-lg px-4 py-3 translate-y-2">
+    <div className="my-6 w-[90vw] md:w-full " >
+      <div className="flex w-[90vw] md:w-full  items-center justify-between bg-zinc-50 dark:bg-[#141414] border dark:border-zinc-800 border-zinc-200 rounded-t-lg px-4 py-3 translate-y-2">
         {value.filename && <p className="text-sm">{value.filename}</p>}
         <Clipoboard content={value.code} />
       </div>
       <Refractor
+        inline={false}
+        plainText={false}
         language={value.language ?? "ts"}
         value={value.code}
-        className="text-sm p-5 border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal"
+        className="text-sm w-[90vw] md:w-full text-wrap p-5 border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal wr"
       />
     </div>
   );

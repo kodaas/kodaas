@@ -13,7 +13,7 @@ export default function PageHeading({
   children,
 }: HeadingType) {
   return (
-    <header className="mb-10">
+    <header className="mb-5">
       <Slide>
         <h1 className="max-w-3xl font-incognito font-semibold tracking-tight sm:text-5xl text-3xl mb-6 lg:leading-[3.7rem]">
           {title}

@@ -40,10 +40,6 @@ export default async function ProjectsPage() {
         />
       </section>
 
-      <div>
-        <h1>Projects Page WIP 🏗️🚧</h1>
-      </div>
-
       <Slide delay={0.1}>
         {projects.length > 0 ? (
           <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
