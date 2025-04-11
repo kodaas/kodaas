@@ -11,18 +11,17 @@ import { Slide } from "@/app/components/shared/Slide";
 import VideoPlayer from "@/app/components/shared/VideoPlayer";
 import Favicon from "@/lib/favicon";
 
-type Props = {
-  params: {
-    project: string;
-  };
-};
-
 const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png";
+  "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/projects-og";
 
 // Dynamic metadata for SEO
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.project;
+export async function generateMetadata({
+  params,
+}:  {
+  params: Promise<{ project: string }>
+}): Promise<Metadata> {
+  const slug = (await params).project;
+
   const project: ProjectType = await sanityFetch({
     query: singleProjectQuery,
     tags: ["project"],
@@ -31,21 +30,25 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: `${project.name} | Project`,
-    metadataBase: new URL(`https://victoreke.com/projects/${project.slug}`),
+    metadataBase: new URL(
+      `https://kodaas-mu.vercel.app/projects/${project.slug}`,
+    ),
     description: project.tagline,
     openGraph: {
       images: project.coverImage
         ? urlFor(project.coverImage.image).width(1200).height(630).url()
         : fallbackImage,
-      url: `https://victoreke.com/projects/${project.slug}`,
+      url: `https://kodaas-mu.vercel.app/projects/${project.slug}`,
       title: project.name,
       description: project.tagline,
     },
   };
 }
 
-export default async function Project({ params }: Props) {
-  const slug = params.project;
+export default async function Project({ params }: {
+  params: Promise<{ project: string }>;
+}) {
+  const { project: slug } = await params;
   const project: ProjectType = await sanityFetch({
     query: singleProjectQuery,
     tags: ["project"],
@@ -128,13 +131,22 @@ export default async function Project({ params }: Props) {
           <div className="flex flex-wrap justify-between items-baseline gap-4 mt-4">
             <div className="flex items-center gap-4 text-sm dark:text-zinc-400 text-zinc-600">
               <time dateTime={project._updatedAt}>
-                <span className="font-semibold">Updated:</span> {project._updatedAt ? new Date(project._updatedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' }) : 'Date unavailable'}
+                <span className="font-semibold">Updated:</span>{" "}
+                {project._updatedAt
+                  ? new Date(project._updatedAt).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "short",
+                    day: "numeric",
+                  })
+                  : "Date unavailable"}
               </time>
             </div>
 
             {project.tools && project.tools.length > 0 && (
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold dark:text-zinc-300 text-zinc-700">Tools:</span>
+                <span className="text-sm font-semibold dark:text-zinc-300 text-zinc-700">
+                  Tools:
+                </span>
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, index) => (
                     <a
@@ -144,7 +156,7 @@ export default async function Project({ params }: Props) {
                       rel="noopener noreferrer"
                       className="flex items-center gap-2 px-3 py-1 text-sm transition-colors dark:bg-primary-bg bg-secondary-bg rounded-full dark:hover:bg-zinc-800 hover:bg-zinc-200"
                     >
-                      <Favicon domain={tool.url} />
+                      <Favicon domain={tool.url} alt={"🔨"} />
                       {tool.name}
                     </a>
                   ))}
