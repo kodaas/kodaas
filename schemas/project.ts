@@ -82,6 +82,35 @@ const project = {
       type: "blockContent",
       description: "Write a full description about this project",
     }),
+    defineField({
+      name: "tools",
+      title: "Tools & Technologies",
+      type: "array",
+      description: "Add the tools and technologies used in this project",
+      of: [
+        {
+          type: "object",
+          fields: [
+            {
+              name: "name",
+              title: "Tool Name",
+              type: "string",
+            },
+            {
+              name: "url",
+              title: "Tool URL",
+              type: "url",
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "video",
+      title: "Project Video",
+      type: "file",
+      description: "Upload a video demo for this project",
+    }),
   ],
 };
 

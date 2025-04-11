@@ -56,6 +56,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(order asc){
   _updatedAt,
   "slug": slug.current,
   tagline,
+  tools,
   "logo": logo.asset->url,
 }`;
 
@@ -64,12 +65,16 @@ export const singleProjectQuery = groq`*[_type == "project" && slug.current == $
   name,
   projectUrl,
   repository,
+  _updatedAt,
+  "logo": logo.asset->url,
   coverImage {
     "image": asset->url,
     "lqip": asset->metadata.lqip,
     alt,
   },
   tagline,
+  "video": video.asset->url,
+  tools,
   description
 }`;
 

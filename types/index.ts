@@ -73,6 +73,8 @@ export type ProjectType = {
     lqip: string;
   };
   description: PortableTextBlock[];
+  tools: { name: string, url: string }[];
+  video?: string;
 };
 
 export type PostType = {

@@ -40,22 +40,6 @@
 
 ---
 
-## 🧰 Languages and Toolbox
-
-<h3 style="font-size: 5em">
-   I use optimized, cost-efficient and essential tools to solve specific problems. be it Web, Mobile, Desktop, Spatial computing, and IoT.
-</h3>
-
-<br />
-<br />
-<br />
-
-#
-
-### 📊 Stats
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=kodaas&theme=onedark_duo&border_radius=15)](https://git.io/streak-stats)
-
-#
-
-# Checkout my projects 👇😉
+## 🧰 Leng pd eific To.ebr
+r=ko<h3s__oy ="e5"> ,nss  vcic   W,Mb, kp,Sicpug,T.</3>
+<b/><b/><b/>### 👇😉

@@ -9,6 +9,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 import EmptyState from "@/app/components/shared/EmptyState";
 import { GoArrowRight } from "react-icons/go";
+import Favicon from "@/lib/favicon";
 
 export const metadata: Metadata = {
   title: "Project | Fiyinfoluwa John Ajala",
@@ -30,15 +31,15 @@ export default async function ProjectsPage() {
   });
 
   return (
-    <>
-      <section>
+    <section className="space-y-20">
+      <div>
         <Availbility />
 
         <PageHeading
           title="A glimpse into my craftmanship"
           description="A Showcase of My Projects, Reflecting Years of Learning and Growth. feel free to contribute, and let's learn together."
         />
-      </section>
+      </div>
 
       <Slide delay={0.1}>
         {projects.length > 0 ? (
@@ -47,27 +48,44 @@ export default async function ProjectsPage() {
               <Link
                 href={`/projects/${project.slug}`}
                 key={project._id}
-                className="flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-4 rounded-lg"
+                className="group flex flex-col gap-3 dark:bg-primary-bg/50 bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-5 rounded-xl transition-all duration-300 hover:shadow-lg dark:hover:shadow-zinc-800/50 hover:shadow-zinc-200"
               >
-                {project.logo ? (
-                  <Image
-                    src={project.logo}
-                    width={60}
-                    height={60}
-                    alt={project.name}
-                    className="dark:bg-zinc-800 bg-zinc-100 rounded-md p-2"
-                  />
-                ) : (
-                  <div className="dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-2 rounded-lg text-3xl">
-                    🪴
-                  </div>
-                )}
-                <div>
-                  <h2 className="text-lg tracking-wide mb-1">{project.name}</h2>
-                  <div className="text-sm dark:text-zinc-400 text-zinc-600">
-                    {project.tagline}
+                <div className="flex items-center gap-4">
+                  {project.logo ? (
+                    <Image
+                      src={project.logo}
+                      width={60}
+                      height={60}
+                      alt={project.name}
+                      className="dark:bg-zinc-800/50 bg-zinc-100 rounded-lg p-2 group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="dark:bg-primary-bg/50 bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-3 rounded-lg text-3xl group-hover:scale-105 transition-transform duration-300">
+                      🪴
+                    </div>
+                  )}
+                  <div>
+                    <h2 className="text-lg font-medium tracking-wide group-hover:text-primary-color dark:group-hover:text-primary-color transition-colors duration-300">
+                      {project.name}
+                    </h2>
+                    <div className="text-sm dark:text-zinc-400 text-zinc-600 line-clamp-1">
+                      {project.tagline}
+                    </div>
                   </div>
                 </div>
+                {project.tools && project.tools.length > 0 && (
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {project.tools.map((tool) => (
+                      <div 
+                        key={tool.url} 
+                        className="flex items-center gap-2 text-xs dark:bg-zinc-800/50 bg-zinc-100 px-3 py-1.5 rounded-full group-hover:bg-primary-color/10 dark:group-hover:bg-primary-color/10 transition-colors duration-300"
+                      >
+                        <Favicon domain={tool.url} alt={tool.name} />
+                        <span className="font-medium">{tool.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </Link>
             ))}
           </section>
@@ -83,6 +101,6 @@ export default async function ProjectsPage() {
           About Me <GoArrowRight />
         </Link>
       </div>
-    </>
+    </section>
   );
 }

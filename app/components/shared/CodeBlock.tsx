@@ -41,6 +41,7 @@ type codeTypes = {
   };
 };
 
+
 export default function CodeBlock({ value }: codeTypes) {
   return (
     <div className="my-6 w-[90vw] md:w-full " >
