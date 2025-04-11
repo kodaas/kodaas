@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .light {
   /* Track */
   ::-webkit-scrollbar-track {
@@ -83,80 +84,3 @@ h4 {
     stroke-dashoffset: 12433.8193359375;
   }
 }
-
-/* @keyframes grain {
-  0%,
-  100% {
-    transform: translate(0);
-  }
-  10% {
-    transform: translate(-5%, -10%);
-  }
-  20% {
-    transform: translate(-15%, 5%);
-  }
-  30% {
-    transform: translate(7%, -25%);
-  }
-  40% {
-    transform: translate(-5%, 25%);
-  }
-  50% {
-    transform: translate(-15%, 10%);
-  }
-  60% {
-    transform: translate(15%);
-  }
-  70% {
-    transform: translateY(15%);
-  }
-  80% {
-    transform: translate(3%, 35%);
-  }
-  90% {
-    transform: translate(-10%, 10%);
-  }
-} */
-
-/* .noise {
-  position: fixed;
-  z-index: 9999;
-  top: -300%;
-  left: -150%;
-  height: 600%;
-  width: 600%;
-  -webkit-animation: grain 7s steps(10) infinite;
-  animation-duration: 7s;
-  animation-timing-function: steps(10);
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: grain;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  animation: grain 7s steps(10) infinite;
-  animation-duration: 7s;
-  animation-timing-function: steps(10);
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: grain;
-  animation-timeline: auto;
-  animation-range-start: normal;
-  animation-range-end: normal;
-  background-size: 200px;
-  background-repeat: repeat;
-  opacity: 0.25;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion) {
-  .noise {
-    display: none;
-  }
-} */
