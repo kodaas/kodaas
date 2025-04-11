@@ -56,11 +56,11 @@ export default async function Project({ params }: {
   });
 
   return (
-    <main className="max-w-6xl mx-auto lg:px-16 px-8">
+    <main className="max-w-6xl mx-auto lg:px-16">
       <Slide>
         <div className="max-w-3xl mx-auto">
           <div className="flex items-start justify-between flex-wrap mb-4">
-            <h1 className="font-incognito font-black tracking-tight sm:text-5xl text-3xl mb-4 max-w-md">
+            <h1 className="font-incognito font-black tracking-tight sm:text-3xl text-2xl mb-4 max-w-md">
               <div className="flex items-center gap-x-4">
                 {project.logo
                   ? (

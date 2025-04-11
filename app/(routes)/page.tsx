@@ -54,7 +54,7 @@ export default async function HomePage() {
               </Slide>
             </div>
           ))}
-        <Slide delay={0.14}>
+        <Slide delay={0.14} className="flex items-center justify-center w-full h-full">
           <HeroBrainSvg />
         </Slide>
       </section>
