@@ -54,7 +54,7 @@ export default function CodeBlock({ value }: codeTypes) {
         plainText={false}
         language={value.language ?? "ts"}
         value={value.code}
-        className="text-sm w-[90vw] md:w-full text-wrap p-5 border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal wr"
+        className={`text-sm w-[90vw] md:w-full text-wrap p-5 border-x border-b dark:border-zinc-800 border-zinc-200 rounded-b-lg tracking-normal language-${value.language ?? 'ts'} prism-code`}
       />
     </div>
   );

@@ -8,8 +8,10 @@ import { urlFor } from "@/lib/sanity.image";
 import { sanityFetch } from "@/lib/sanity.client";
 import { BiLinkExternal, BiLogoGithub } from "react-icons/bi";
 import { Slide } from "@/app/components/shared/Slide";
-import VideoPlayer from "@/app/components/shared/VideoPlayer";
+// import VideoPlayer from "@/app/components/shared/VideoPlayer";
 import Favicon from "@/lib/favicon";
+import RefLink from "@/app/components/shared/RefLink";
+import Link from "next/link";
 
 const fallbackImage: string =
   "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/projects-og";
@@ -17,8 +19,8 @@ const fallbackImage: string =
 // Dynamic metadata for SEO
 export async function generateMetadata({
   params,
-}:  {
-  params: Promise<{ project: string }>
+}: {
+  params: Promise<{ project: string }>;
 }): Promise<Metadata> {
   const slug = (await params).project;
 
@@ -29,7 +31,7 @@ export async function generateMetadata({
   });
 
   return {
-    title: `${project.name} | Project`,
+    title: `${project.name} | Project - Fiyinfoluwa John Ajala`,
     metadataBase: new URL(
       `https://kodaas-mu.vercel.app/projects/${project.slug}`,
     ),
@@ -45,7 +47,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function Project({ params }: {
+export default async function Project({
+  params,
+}: {
   params: Promise<{ project: string }>;
 }) {
   const { project: slug } = await params;
@@ -62,21 +66,19 @@ export default async function Project({ params }: {
           <div className="flex items-start justify-between flex-wrap mb-4">
             <h1 className="font-incognito font-black tracking-tight sm:text-3xl text-2xl mb-4 max-w-md">
               <div className="flex items-center gap-x-4">
-                {project.logo
-                  ? (
-                    <Image
-                      src={project.logo}
-                      width={40}
-                      height={40}
-                      alt={project.name}
-                      className="dark:bg-primary-bg/50 bg-zinc-50 rounded-lg p-2 group-hover:scale-105 transition-transform duration-300"
-                    />
-                  )
-                  : (
-                    <div className="dark:bg-primary-bg/50 bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-2 rounded-lg text-3xl group-hover:scale-105 transition-transform duration-300">
-                      🪴
-                    </div>
-                  )}
+                {project.logo ? (
+                  <Image
+                    src={project.logo}
+                    width={40}
+                    height={40}
+                    alt={project.name}
+                    className="dark:bg-primary-bg/50 bg-zinc-50 rounded-lg p-2 group-hover:scale-105 transition-transform duration-300"
+                  />
+                ) : (
+                  <div className="dark:bg-primary-bg/50 bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-2 rounded-lg text-3xl group-hover:scale-105 transition-transform duration-300">
+                    🪴
+                  </div>
+                )}
                 {project.name}
               </div>
             </h1>
@@ -112,53 +114,47 @@ export default async function Project({ params }: {
             </div>
           </div>
 
-          <div className="w-full group">
-            {project.video ? <VideoPlayer videoSrc={project.video} /> : (
-              <>
-                <Image
-                  className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover group-hover:scale-105 transition-transform duration-300"
-                  fill
-                  src={project.coverImage?.image ?? fallbackImage}
-                  alt={project.coverImage?.alt ?? project.name}
-                  quality={100}
-                  placeholder={project.coverImage?.lqip ? `blur` : "empty"}
-                  blurDataURL={project.coverImage?.lqip || ""}
-                />
-              </>
-            )}
+          <div className="w-full group relative aspect-[15/7.5] mb-4">
+            <Image
+              className="rounded-xl object-top border dark:border-zinc-800 border-zinc-100 object-cover group-hover:scale-105 transition-transform duration-300"
+              fill
+              src={project.coverImage?.image ?? fallbackImage}
+              alt={project.coverImage?.alt ?? project.name}
+              quality={100}
+              placeholder={project.coverImage?.lqip ? `blur` : "empty"}
+              blurDataURL={project.coverImage?.lqip || ""}
+            />
           </div>
 
-          <div className="flex flex-wrap justify-between items-baseline gap-4 mt-4">
+          <div className="flex flex-wrap justify-between items-baseline gap-4 mt-6">
             <div className="flex items-center gap-4 text-sm dark:text-zinc-400 text-zinc-600">
               <time dateTime={project._updatedAt}>
                 <span className="font-semibold">Updated:</span>{" "}
                 {project._updatedAt
                   ? new Date(project._updatedAt).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "short",
-                    day: "numeric",
-                  })
+                      year: "numeric",
+                      month: "short",
+                      day: "numeric",
+                    })
                   : "Date unavailable"}
               </time>
             </div>
 
             {project.tools && project.tools.length > 0 && (
               <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold dark:text-zinc-300 text-zinc-700">
+                {/* <span className="text-sm font-semibold dark:text-zinc-300 text-zinc-700">
                   Tools:
-                </span>
+                </span> */}
                 <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, index) => (
-                    <a
+                    <RefLink
                       key={index}
                       href={tool.url}
                       target="_blank"
-                      rel="noopener noreferrer"
                       className="flex items-center gap-2 px-3 py-1 text-sm transition-colors dark:bg-primary-bg bg-secondary-bg rounded-full dark:hover:bg-zinc-800 hover:bg-zinc-200"
                     >
-                      <Favicon domain={tool.url} alt={"🔨"} />
-                      {tool.name}
-                    </a>
+                      <Favicon domain={tool.url} alt={"🔨"} /> {tool.name}
+                    </RefLink>
                   ))}
                 </div>
               </div>
@@ -171,6 +167,29 @@ export default async function Project({ params }: {
               components={CustomPortableText}
             />
           </div>
+
+          <Slide delay={0.1}>
+            <div className="mt-12 flex justify-between gap-4 border-t dark:border-zinc-800 border-zinc-200 pt-8">
+              {project.previousProject ? (
+                <Link
+                  href={`/projects/${project.previousProject.slug}`}
+                  className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
+                >
+                  ← {project.previousProject.name || 'Previous Project'}
+                </Link>
+              ) : (
+                <span />
+              )}
+              {project.nextProject && (
+                <Link
+                  href={`/projects/${project.nextProject.slug}`}
+                  className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
+                >
+                  {project.nextProject.name || 'Next Project'} →
+                </Link>
+              )}
+            </div>
+          </Slide>
         </div>
       </Slide>
     </main>

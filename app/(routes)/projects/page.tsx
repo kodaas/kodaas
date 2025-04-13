@@ -65,10 +65,10 @@ export default async function ProjectsPage() {
                     </div>
                   )}
                   <div>
-                    <h2 className="text-lg font-medium tracking-wide group-hover:text-primary-color dark:group-hover:text-primary-color transition-colors duration-300">
+                    <h2 className="text-lg font-semibold tracking-wide group-hover:text-primary-color dark:group-hover:text-primary-color transition-colors duration-300">
                       {project.name}
                     </h2>
-                    <div className="text-sm dark:text-zinc-400 text-zinc-600 line-clamp-1">
+                    <div className="text-sm dark:text-zinc-400 text-zinc-600 line-clamp-2">
                       {project.tagline}
                     </div>
                   </div>
@@ -76,9 +76,9 @@ export default async function ProjectsPage() {
                 {project.tools && project.tools.length > 0 && (
                   <div className="mt-2 flex flex-wrap gap-2">
                     {project.tools.map((tool) => (
-                      <div 
-                        key={tool.url} 
-                        className="flex items-center gap-2 text-xs dark:bg-zinc-800/50 bg-zinc-100 px-3 py-1.5 rounded-full group-hover:bg-primary-color/10 dark:group-hover:bg-primary-color/10 transition-colors duration-300"
+                      <div
+                        key={tool.url}
+                        className="flex items-center gap-2 text-xs dark:bg-zinc-800/50 bg-zinc-100 px-3 py-1.5 rounded-full"
                       >
                         <Favicon domain={tool.url} alt={tool.name} />
                         <span className="font-medium">{tool.name}</span>

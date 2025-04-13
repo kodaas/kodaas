@@ -1,4 +1,5 @@
 import "./globals.css";
+import "./prism-theme.css";
 import type { Metadata } from "next";
 import { incognito } from "./assets/font/font";
 import { gitlabmono } from "./assets/font/font";

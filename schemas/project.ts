@@ -10,9 +10,9 @@ const project = {
   fields: [
     defineField({
       name: "order",
-      title: "Oder Number",
+      title: "Order Number",
       type: "number",
-      description: "Input a number to order the Project",
+      description: "Input a unique number to order the Project",
       validation: (rule) => rule.required(),
     }),
     {

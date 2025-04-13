@@ -75,6 +75,8 @@ export type ProjectType = {
   description: PortableTextBlock[];
   tools: { name: string, url: string }[];
   video?: string;
+  previousProject?: { slug: string, name: string };
+  nextProject?: { slug: string, name: string };
 };
 
 export type PostType = {

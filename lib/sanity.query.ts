@@ -75,7 +75,9 @@ export const singleProjectQuery = groq`*[_type == "project" && slug.current == $
   tagline,
   "video": video.asset->url,
   tools,
-  description
+  description,
+  "previousProject": *[_type == "project" && order < ^.order] | order(order desc)[0]{name, "slug": slug.current},
+  "nextProject": *[_type == "project" && order > ^.order] | order(order asc)[0]{name, "slug": slug.current}
 }`;
 
 export const jokesQuery = groq`*[_type == "joke"] | order(_createdAt desc){
