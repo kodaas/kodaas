@@ -18,10 +18,10 @@ const links = [
     title: "About",
     href: "/about",
   },
-  {
-    title: "Blog",
-    href: "/blog",
-  },
+  // {
+  //   title: "Blog",
+  //   href: "/blog",
+  // },
   {
     title: "Gallery",
     href: "/gallery",
