@@ -48,7 +48,7 @@ export default async function ProjectsPage() {
               <Link
                 href={`/projects/${project.slug}`}
                 key={project._id}
-                className="group flex flex-col gap-3 dark:bg-primary-bg/50 bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-5 rounded-xl transition-all duration-300 hover:shadow-lg dark:hover:shadow-zinc-800/50 hover:shadow-zinc-200"
+                className="group flex flex-col justify-between gap-3 dark:bg-primary-bg/50 bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-5 rounded-xl transition-all duration-300 hover:shadow-lg dark:hover:shadow-zinc-800/50 hover:shadow-zinc-200"
               >
                 <div className="flex items-center gap-4">
                   {project.logo ? (

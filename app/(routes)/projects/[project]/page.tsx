@@ -126,8 +126,8 @@ export default async function Project({
             />
           </div>
 
-          <div className="flex flex-wrap justify-between items-baseline gap-4 mt-6">
-            <div className="flex items-center gap-4 text-sm dark:text-zinc-400 text-zinc-600">
+          <div className="flex justify-between items-baseline gap-4 mt-6">
+            <div className="flex shrink-0 items-center gap-4 text-sm dark:text-zinc-400 text-zinc-600">
               <time dateTime={project._updatedAt}>
                 <span className="font-semibold">Updated:</span>{" "}
                 {project._updatedAt
@@ -141,11 +141,11 @@ export default async function Project({
             </div>
 
             {project.tools && project.tools.length > 0 && (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-end gap-2">
                 {/* <span className="text-sm font-semibold dark:text-zinc-300 text-zinc-700">
                   Tools:
                 </span> */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap items-center justify-end gap-2">
                   {project.tools.map((tool, index) => (
                     <RefLink
                       key={index}
@@ -175,7 +175,7 @@ export default async function Project({
                   href={`/projects/${project.previousProject.slug}`}
                   className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
                 >
-                  ← {project.previousProject.name || 'Previous Project'}
+                  ← {project.previousProject.name || "Previous Project"}
                 </Link>
               ) : (
                 <span />
@@ -185,7 +185,7 @@ export default async function Project({
                   href={`/projects/${project.nextProject.slug}`}
                   className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
                 >
-                  {project.nextProject.name || 'Next Project'} →
+                  {project.nextProject.name || "Next Project"} →
                 </Link>
               )}
             </div>
