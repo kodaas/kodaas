@@ -73,10 +73,10 @@ export type ProjectType = {
     lqip: string;
   };
   description: PortableTextBlock[];
-  tools: { name: string, url: string }[];
+  tools: { name: string; url: string }[];
   video?: string;
-  previousProject?: { slug: string, name: string };
-  nextProject?: { slug: string, name: string };
+  previousProject?: { slug: string; name: string };
+  nextProject?: { slug: string; name: string };
 };
 
 export type PostType = {
@@ -128,3 +128,16 @@ export type TestimonialType = {
   url: string;
   quotet: string;
 };
+
+export interface GalleryItemType {
+  _id: string;
+  title: string;
+  description: string;
+  contents: {
+    url: string;
+    lqip: string;
+    meta: any;
+    caption: PortableTextBlock[];
+  }[];
+  date: string;
+}

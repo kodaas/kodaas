@@ -48,17 +48,33 @@ export const jobQuery = groq`*[_type == "job"] | order(order desc){
   endDate,
 }`;
 
-export const projectsQuery = groq`*[_type == "project"] | order(order asc){
-  _id,
-  name,
-  order,
-  active,
-  _updatedAt,
-  "slug": slug.current,
-  tagline,
-  tools,
-  "logo": logo.asset->url,
-}`;
+export const projectsQuery = groq`*[_type == "project"] | order(order asc) {
+    tools[]->{name, url},
+    _id,
+    name,
+    order,
+    active,
+    _updatedAt,
+    "slug": slug.current,
+    tools,
+    tagline,
+    "logo": logo.asset->url,
+  }`;
+
+export const galleryItemsQuery = groq`
+  *[_type == "galleryItem"] | order(date desc) {
+    _id,
+    title,
+    date,
+    description,
+    contents[] {
+      "url": media.asset->url,
+      "lqip": media.asset->metadata.lqip,
+      "meta": media.asset->metadata,
+      caption,
+    }
+  }
+`;
 
 export const singleProjectQuery = groq`*[_type == "project" && slug.current == $slug][0]{
   _id,
@@ -129,8 +145,8 @@ export const testimonialQuery = groq`*[_type == "testimonial"] | order(_createdA
     "image": asset->url,
     "lqip": asset->metadata.lqip,
     alt,
-  }, 
-  handle,  
-  url, 
-  quotet 
+  },
+  handle,
+  url,
+  quotet
 }`;

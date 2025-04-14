@@ -12,6 +12,7 @@ import { Slide } from "@/app/components/shared/Slide";
 import Favicon from "@/lib/favicon";
 import RefLink from "@/app/components/shared/RefLink";
 import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
 const fallbackImage: string =
   "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/projects-og";
@@ -176,20 +177,41 @@ export default async function Project({
                   ← {project.previousProject.name || "Previous Project"}
                 </Link>
               ) : (
-                <span />
+                <Link
+                  href={`/projects`}
+                  className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
+                >
+                  ← Back
+                </Link>
               )}
-              {project.nextProject && (
+              {project.nextProject ? (
                 <Link
                   href={`/projects/${project.nextProject.slug}`}
                   className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
                 >
                   {project.nextProject.name || "Next Project"} →
                 </Link>
+              ) : (
+                <Link
+                  href={`/about`}
+                  className="flex items-center gap-2 px-4 py-2 dark:bg-primary-bg bg-secondary-bg rounded-md border dark:border-transparent border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 transition-colors text-primary-color"
+                >
+                  About Me →
+                </Link>
               )}
             </div>
           </Slide>
         </div>
       </Slide>
+
+      <div className="flex mt-20 justify-evenly items-center max-w-3xl mx-auto">
+        <Link
+          href={"/about"}
+          className="font-incognito flex items-center gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
+        >
+          About Me <GoArrowRight />
+        </Link>
+      </div>
     </main>
   );
 }

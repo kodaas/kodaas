@@ -37,7 +37,7 @@ export default async function ProjectsPage() {
 
         <PageHeading
           title="A glimpse into my craftmanship"
-          description="A Showcase of My Projects, Reflecting Years of Learning and Growth. feel free to contribute, and let's learn together."
+          description="A curated showcase of some of my projects — highlighting continuous learning and growth. You're welcome to contribute; let’s grow and explore together!"
         />
       </div>
 
@@ -77,10 +77,12 @@ export default async function ProjectsPage() {
                   <div className="mt-2 flex flex-wrap gap-2">
                     {project.tools.map((tool) => (
                       <div
-                        key={tool.url}
+                        key={tool.name}
                         className="flex items-center gap-2 text-xs dark:bg-zinc-800/50 bg-zinc-100 px-3 py-1.5 rounded-full"
                       >
-                        {tool.url ? <Favicon domain={tool.url} alt={""} /> : null } 
+                        {tool.url ? (
+                          <Favicon domain={tool.url} alt={""} />
+                        ) : null}
                         <span className="font-medium">{tool.name}</span>
                       </div>
                     ))}

@@ -121,10 +121,10 @@ export default async function AboutPage() {
             <Heroes />
             <div className="flex mt-20 justify-evenly items-center max-w-3xl mx-auto">
               <Link
-                href={"/blog"}
+                href={"/gallery"}
                 className="font-incognito flex items-center gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
               >
-                My Blogs <GoArrowRight />
+                My Gallery <GoArrowRight />
               </Link>
             </div>
           </div>

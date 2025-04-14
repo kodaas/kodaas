@@ -10,6 +10,7 @@ import blockContent from "./blockContent";
 import quiz from "./quiz";
 import joke from "./heroJokes";
 import testimonials from "./testimonials";
+import { galleryItem } from "./galleryItem";
 
 export const schemaTypes = [
   profile,
@@ -20,6 +21,7 @@ export const schemaTypes = [
   testimonials,
   heroe,
   joke,
+  galleryItem,
 
   // Reference types
   blockContent,
