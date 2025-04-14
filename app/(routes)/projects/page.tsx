@@ -80,7 +80,7 @@ export default async function ProjectsPage() {
                         key={tool.url}
                         className="flex items-center gap-2 text-xs dark:bg-zinc-800/50 bg-zinc-100 px-3 py-1.5 rounded-full"
                       >
-                        {tool.url ? <Favicon domain={tool.url} alt={"🔨"} /> : "🔨" } 
+                        {tool.url ? <Favicon domain={tool.url} alt={""} /> : null } 
                         <span className="font-medium">{tool.name}</span>
                       </div>
                     ))}
