@@ -153,7 +153,7 @@ export default async function Project({
                       target="_blank"
                       className="flex items-center gap-2 px-3 py-1 text-sm transition-colors dark:bg-primary-bg bg-secondary-bg rounded-full dark:hover:bg-zinc-800 hover:bg-zinc-200"
                     >
-                      <Favicon domain={tool.url} alt={"🔨"} /> {tool.name}
+                      {tool.url ? <Favicon domain={tool.url} alt={"🔨"} /> : "🔨" } {tool.name}
                     </RefLink>
                   ))}
                 </div>
