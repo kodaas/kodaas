@@ -1,5 +1,4 @@
 import { GalleryImageGrid } from "@/app/components/pages/GalleryImageGrid";
-import PageHeading from "@/app/components/shared/PageHeading";
 import { sanityFetch } from "@/lib/sanity.client";
 import { galleryItemsQuery } from "@/lib/sanity.query";
 import { Metadata } from "next";
