@@ -39,6 +39,7 @@
     "react-wrap-balancer": "^1.1.1",
     "rehype-highlight": "^7.0.1",
     "remark-gfm": "^4.0.0",
+    "sanity": "^3.89.0",
     "tailwind-merge": "^2.6.0",
     "zod": "^3.24.1",
     "zustand": "^5.0.2"
