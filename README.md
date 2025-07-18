@@ -37,9 +37,3 @@
   <a href="https://github.com/kodaas?tab=followers">
     <img alt="followers" title="Follow me on Github" src="https://custom-icon-badges.demolab.com/github/followers/kodaas?color=236ad3&labelColor=1155ba&style=for-the-badge&logo=person-add&label=Follow&logoColor=white"/></a>
    </p>
-
----
-
-## 🧰 Leng pd eific To.ebr
-r=ko<h3s__oy ="e5"> ,nss  vcic   W,Mb, kp,Sicpug,T.</3>
-<b/><b/><b/>### 👇😉
