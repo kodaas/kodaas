@@ -1,4 +1,5 @@
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/next"
 import "@/app/globals.css";
 import type { Metadata } from "next";
 import { NavBar } from "@/app/components/global/Nav";
@@ -55,6 +56,7 @@ export default function RootLayout({
       >
         <NextTopLoader color="#fbbf24" />
         <SpeedInsights />
+        <Analytics/>
 
         <Providers>
           <NavBar />
