@@ -6,10 +6,11 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "upload:pinecone": "bun scripts/upload-bio.ts"
   },
   "dependencies": {
-    "@ai-sdk/google": "^1.0.12",
+    "@ai-sdk/google": "^1.2.22",
     "@pinecone-database/pinecone": "^4.0.0",
     "@portabletext/react": "^3.2.0",
     "@sanity/code-input": "^5.1.2",
@@ -21,7 +22,7 @@
     "@uidotdev/usehooks": "^2.4.1",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "ai": "^4.0.24",
+    "ai": "^4.3.19",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.488.0",

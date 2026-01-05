@@ -25,13 +25,28 @@ export async function continueConversation(input: string) {
   const history = getMutableAIState();
   // const converter = new showdown.Converter();
 
-  try {
-    const context = await queryPinecone(input);
+  const systemPrompt = async () => {
+    try {
+      // Optimize response time: timeout after 3 seconds to avoid blocking
+      const contextPromise = queryPinecone(input);
+      const timeoutPromise = new Promise<string[]>((resolve) =>
+        setTimeout(() => resolve([]), 3000),
+      );
 
+      const context = await Promise.race([contextPromise, timeoutPromise]);
+
+      return `${SYSTEM_PROMPT} ${context.join("\n")}`;
+    } catch (error) {
+      console.error("Failed to fetch context:", error);
+      return SYSTEM_PROMPT;
+    }
+  };
+
+  try {
     const result = await streamUI({
-      model: google("gemini-2.0-flash-exp"),
+      model: google("gemini-3-flash-preview"),
       temperature: 0.5,
-      system: `${SYSTEM_PROMPT} ${context.join("\n")}`,
+      system: await systemPrompt(),
       messages: [...history.get(), { role: "user", content: input }],
       text: ({ content, done }) => {
         if (done) {

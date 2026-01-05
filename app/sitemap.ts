@@ -5,6 +5,8 @@ import { MetadataRoute } from "next";
 
 const { NEXT_PUBLIC_BASE_URL } = process.env;
 
+export const dynamic = "force-dynamic";
+
 function formatDate(today: Date) {
   const year = today.getFullYear();
   const month = String(today.getMonth() + 1).padStart(2, "0"); // Months are 0-based
@@ -14,31 +16,41 @@ function formatDate(today: Date) {
 }
 
 const getAllProjects = async (): Promise<MetadataRoute.Sitemap> => {
-  const projects: ProjectType[] = await sanityFetch({
-    query: projectsQuery,
-    tags: ["project"],
-  });
+  try {
+    const projects: ProjectType[] = await sanityFetch({
+      query: projectsQuery,
+      tags: ["project"],
+    });
 
-  return projects.map(({ _id, _updatedAt }) => ({
-    url: `${NEXT_PUBLIC_BASE_URL}/projects/${_id}`,
-    changeFrequency: "yearly",
-    priority: 0.6,
-    lastModified: new Date(_updatedAt),
-  }));
+    return projects.map(({ _id, _updatedAt }) => ({
+      url: `${NEXT_PUBLIC_BASE_URL}/projects/${_id}`,
+      changeFrequency: "yearly",
+      priority: 0.6,
+      lastModified: new Date(_updatedAt),
+    }));
+  } catch (error) {
+    console.error("Sitemap: Failed to fetch projects", error);
+    return [];
+  }
 };
 
 const getAllBlogs = async (): Promise<MetadataRoute.Sitemap> => {
-  const blogs: PostType[] = await sanityFetch({
-    query: postsQuery,
-    tags: ["post"],
-  });
+  try {
+    const blogs: PostType[] = await sanityFetch({
+      query: postsQuery,
+      tags: ["post"],
+    });
 
-  return blogs.map(({ _id, _updatedAt }) => ({
-    url: `${NEXT_PUBLIC_BASE_URL}/blog/${_id}`,
-    changeFrequency: "weekly",
-    priority: 0.8,
-    lastModified: new Date(_updatedAt!),
-  }));
+    return blogs.map(({ _id, _updatedAt }) => ({
+      url: `${NEXT_PUBLIC_BASE_URL}/blog/${_id}`,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      lastModified: new Date(_updatedAt!),
+    }));
+  } catch (error) {
+    console.error("Sitemap: Failed to fetch blogs", error);
+    return [];
+  }
 };
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

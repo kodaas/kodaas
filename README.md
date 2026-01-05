@@ -11,7 +11,7 @@
 <h4> Still building my portfolio 🏗️ <br/>
 👇👇 but you can take a look at my resume 👌 </h4>
 
-## [View Resume](https://cdn.sanity.io/files/68opc75v/production/29ea484692a77bfbb3a1f4330579f1f8a72a5e62.pdf)
+## [View Resume](https://cdn.sanity.io/files/68opc75v/production/29ea484692a77bfbb3a1f4330579f1f8a72a5e62.pdf?ref=kodaas-mu.vercel.app)
 
 <br/>
 
