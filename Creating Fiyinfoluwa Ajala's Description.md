@@ -150,9 +150,9 @@ On the Pather platform itself, Ajala is listed as an **Expert**. This is a clien
 
 * **Market Positioning:** This validates his authority in the field. He is not just a backend developer; he is a subject matter expert capable of teaching others. The platform lists his availability for booking, suggesting a freelance/consultancy revenue stream supplementing his engineering income.
 
-## **7\. Strategic Consulting: The LeaderJoe 1808 Foundation**
+## **7\. Strategic Consulting and Engineering: The LeaderJoe 1808 Foundation**
 
-Ajala’s profile includes a significant consultancy dimension, particularly with the **LeaderJoe 1808 Foundation**, a charity focused on healthcare and education.
+Ajala’s profile includes a significant consultancy dimension and lead Engineering, particularly with the **LeaderJoe 1808 Foundation**, a charity focused on healthcare and education and Golfmatecom a Mobile App for Golfers Globally.
 
 ### **7.1 Strategic Audit and Digital Governance**
 
