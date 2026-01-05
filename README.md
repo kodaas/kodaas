@@ -5,7 +5,13 @@
 <h1 align="center">Hi there, I'm <a href="https://kodaas-mu.vercel.app/" target="_blank">Fiyinfoluwa John Ajala (kodaas)</a> 👨‍💻</h1>
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=202124&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Digital+Craftsman;Full+Stack+Developer;AI+Engineer+(GenAI+%26+LLMs);Building+the+Impossible" alt="Typing SVG" /></a>
+  <a href="https://git.io/typing-svg">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7F7F7&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Digital+Craftsman;Full+Stack+Developer;AI+Engineer+(GenAI+%26+LLMs);Building+the+Impossible">
+      <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=202124&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Digital+Craftsman;Full+Stack+Developer;AI+Engineer+(GenAI+%26+LLMs);Building+the+Impossible">
+      <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=202124&background=FFFFFF00&center=true&vCenter=true&width=435&lines=Digital+Craftsman;Full+Stack+Developer;AI+Engineer+(GenAI+%26+LLMs);Building+the+Impossible" alt="Typing SVG" />
+    </picture>
+  </a>
 </p>
 
 <p align="center">
@@ -55,33 +61,7 @@
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" />
 </p>
 
-## 📊 GitHub Stats
 
-<p align="center">
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <a href="https://github.com/kodaas">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=kodaas&theme=radical&hide_border=true">
-        <img alt="Streak Stats" src="https://github-readme-streak-stats.herokuapp.com/?user=kodaas&theme=default&hide_border=true">
-      </picture>
-    </a>
-  </div>
-  <br/>
-  <div style="display: flex; justify-content: center; gap: 10px;">
-    <a href="https://github.com/kodaas">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=radical&hide_border=true">
-        <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=default&hide_border=true">
-      </picture>
-    </a>
-    <a href="https://github.com/kodaas">
-      <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&layout=compact&theme=radical&hide_border=true">
-        <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&layout=compact&theme=default&hide_border=true">
-      </picture>
-    </a>
-  </div>
-</p>
 
 ## 🐍 Contribution Snake
 
