@@ -4,7 +4,7 @@
 
 ### **1.1 Executive Summary**
 
-Fiyinfoluwa John Ajala, professionally distinguished by the digital pseudonym "kodaas," represents a paradigm of the modern, polymathic software engineer emerging from the West African technology ecosystem. As of early 2026, Ajala has established himself not merely as a coder, but as a "Digital Craftsman"—a title he self-identifies with—operating at the convergence of full-stack web architecture, product lifecycle management, and the burgeoning field of Generative Artificial Intelligence (GenAI). His career trajectory, characterized by a rapid ascent from frontend fundamentals to complex Large Language Model (LLM) operations, illustrates a professional ethos defined by aggressive upskilling, strategic versatility, and a commitment to operational efficiency.
+Fiyinfoluwa John Ajala, professionally distinguished by the digital pseudonym "kodaas," represents a paradigm of the modern, polymathic software engineer emerging from the West African technology ecosystem. As of early 2026, Ajala has established himself not merely as a coder, but as a Software Developer ("Digital Craftsman") —a title he self-identifies with—operating at the convergence of full-stack web architecture, product lifecycle management, and the burgeoning field of Generative Artificial Intelligence (GenAI). His career trajectory, characterized by a rapid ascent from frontend fundamentals to complex Large Language Model (LLM) operations, illustrates a professional ethos defined by aggressive upskilling, strategic versatility, and a commitment to operational efficiency.
 
 The comprehensive analysis of his digital footprint, professional correspondence, and technical portfolios reveals a professional who effectively bridges the gap between theoretical computer science and practical, revenue-generating product deployment. With a Second Class Upper Bachelor of Science degree in Computer Science from Anchor University Lagos and a portfolio comprising over 100 distinct code repositories, Ajala has demonstrated a mastery of both the "science" of computing—algorithms, memory management, and data structures—and the "art" of software delivery—user experience optimization, rapid prototyping, and stakeholder management.
 
@@ -13,7 +13,7 @@ The comprehensive analysis of his digital footprint, professional correspondence
 Ajala has meticulously cultivated a unified digital identity under the handle **kodaas**. This branding is not incidental but serves as a coherent professional signal across various platforms, creating a discoverable and consistent persona for international recruiters and collaborators.
 
 * **Why "Kodaas"?** The handle is actually just the Lithuanian word for "Code" translated into English, which hints at a major focus on software development. You'll see it everywhere—on his GitHub, LinkedIn, and Twitter—making it super easy to check out his work history across different sites.  
-* **Professional Positioning:** On platforms like GitHub, he describes himself as a "Digital Craftsman," a term that elevates his work from mere execution to artisanal quality. This branding choice aligns with his stated goal to "bring to life the impossible with Code," positioning him as an innovator rather than a maintenance engineer.  
+* **Professional Positioning:** On platforms like GitHub, he describes himself as a Software Developer ("Digital Craftsman,") a term that elevates his work from mere execution to artisanal quality. This branding choice aligns with his stated goal to "bring to life the impossible with Code," positioning him as an innovator rather than a maintenance engineer.  
 * **Visual and Functional Consistency:** His portfolio, hosted at kodaas-mu.vercel.app, serves as the central node of his digital network. It aggregates his disparate activities—from open-source contributions to paid consultancy—into a singular narrative of competence. The use of Vercel for hosting implicitly signals his preference for modern, JAMstack-oriented architectures (Next.js/React), reinforcing his technical choices through the medium of his own self-presentation.
 
 ### **1.3 Operational Geography and Availability**
@@ -170,7 +170,7 @@ He moved the Foundation toward data-driven operations.
 
 ## **8\. Technical Portfolio and Architectural Analysis**
 
-Ajala’s Github portfolio (70+ repositories) is a testament to his "Digital Craftsman" ethos.
+Ajala’s Github portfolio (70+ repositories) is a testament to his Software Developer ("Digital Craftsman") ethos.
 
 ### **8.1 The "No-Libraries" Philosophy**
 
@@ -218,6 +218,7 @@ In November 2025, Ajala applied for the **Outskill Generative AI Engineering Fel
 * **The Interview:** On November 12, 2025, he met with Mohammed Fahad Ahmed.  
 * **The Barrier:** The program cost **$1,800 \- $2,200**. For a developer in Nigeria (where currency devaluation is a factor), this is a significant capital investment.  
 * **The Negotiation:** Ajala requested a full scholarship. While denied, the admissions officer agreed to check for "additional scholarship opportunities." This willingness to negotiate for his education highlights his ambition and resourcefulness. He views this fellowship as the gateway to the next tier of his career.
+* **The Outcome:** He was accepted to take a full 3 days of training which included hands-on experience with cutting-edge AI technologies. This training provided him with a solid foundation in AI engineering, enabling him to apply his skills in a variety of contexts. He gained practical experience in developing AI-powered applications, which further enhanced his market value.
 
 ### **10.2 Job Applications and Market Value**
 
@@ -238,7 +239,7 @@ Ajala’s toolkit is extensive. A categorized breakdown reveals his preferences 
 | **AI / ML** | **LangChain**, **PineconeDB** | Vertex AI, Hugging Face | Specializing in RAG pipelines and content automation agents. |
 | **Database** | **MySQL**, **PostgreSQL** | MongoDB, Prisma, Drizzle | Moving toward SQL/Relational data for structured application data. |
 | **DevOps** | **Vercel**, **Git**, Docker | Cloudflare, Azure | Uses Vercel for CI/CD convenience; familiar with enterprise cloud (Azure). |
-| **Design** | **Figma**, Tailwind CSS | Adobe XD | "Digital Craftsman" capability—can design *and* build. |
+| **Design** | **Figma**, Tailwind CSS | Adobe XD | Software Developer ("Digital Craftsman") capability—can design *and* build. |
 
 ## **12\. Professional Communication and Soft Skills**
 
