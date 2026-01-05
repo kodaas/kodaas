@@ -18,13 +18,13 @@ export function getYoutubeId(url: string) {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const shuffleArray = (array: any[]) => { 
-  for (let i = array.length - 1; i > 0; i--) { 
-    const j = Math.floor(Math.random() * (i + 1)); 
-    [array[i], array[j]] = [array[j], array[i]]; 
-  } 
-  return array; 
-}; 
+export const shuffleArray = (array: any[]) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
 
 
 
@@ -50,4 +50,12 @@ export function getGitHubYears(joinYear: number | undefined): number[] {
   const duration = currentYear - joinYear + 1;
   const years = Array.from({ length: duration }, (_year, i) => currentYear - i);
   return years;
+}
+
+export function readTime(content: string) {
+  const wordsPerMinute = 200;
+  const noOfWords = content.split(/\s/g).length;
+  const minutes = noOfWords / wordsPerMinute;
+  const readTime = Math.ceil(minutes);
+  return `${readTime} min read`;
 }

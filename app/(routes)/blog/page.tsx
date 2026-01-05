@@ -1,4 +1,8 @@
 import { Metadata } from "next";
+import Posts from "@/app/components/pages/Posts";
+import PageHeading from "@/app/components/shared/PageHeading";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
 
 export const metadata: Metadata = {
   title: "Blog | Fiyinfoluwa John Ajala",
@@ -15,8 +19,19 @@ export const metadata: Metadata = {
 
 export default function BlogPage() {
   return (
-    <div>
-      <h1>Blog Page WIP 🏗️🚧</h1>
-    </div>
+    <main className="max-w-7xl mx-auto px-6 md:px-16 pt- pb-12">
+      <PageHeading
+        title="Blog"
+        description="Technical articles, tutorials, and thoughts on web development, design, and my journey as a developer."
+      />
+      <Posts />
+
+      <Link
+        href={"/gallery"}
+        className="font-incognito w-full flex items-center justify-center gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
+      >
+        My Gallery <GoArrowRight />
+      </Link>
+    </main>
   );
 }
