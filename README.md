@@ -58,17 +58,39 @@
 ## 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=kodaas&theme=radical&hide_border=true" alt="Streak Stats" />
-</p>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <a href="https://github.com/kodaas">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=kodaas&theme=radical&hide_border=true">
+        <img alt="Streak Stats" src="https://github-readme-streak-stats.herokuapp.com/?user=kodaas&theme=default&hide_border=true">
+      </picture>
+    </a>
+  </div>
+  <br/>
+  <div style="display: flex; justify-content: center; gap: 10px;">
+    <a href="https://github.com/kodaas">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=radical&hide_border=true">
+        <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=kodaas&show_icons=true&theme=default&hide_border=true">
+      </picture>
+    </a>
+    <a href="https://github.com/kodaas">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&layout=compact&theme=radical&hide_border=true">
+        <img alt="Top Languages" src="https://github-readme-stats.vercel.app/api/top-langs/?username=kodaas&layout=compact&theme=default&hide_border=true">
+      </picture>
+    </a>
+  </div>
 </p>
 
 ## 🐍 Contribution Snake
 
 <p align="center">
-  <img alt="Snake animation" src="https://github.com/kodaas/kodaas/blob/output/github-contribution-grid-snake.svg" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github.com/kodaas/kodaas/raw/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://github.com/kodaas/kodaas/raw/output/github-contribution-grid-snake.svg">
+    <img alt="snake animation" src="https://github.com/kodaas/kodaas/raw/output/github-contribution-grid-snake.svg">
+  </picture>
 </p>
 
 <br/>
