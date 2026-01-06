@@ -9,6 +9,7 @@ import { incognito } from "@/app/assets/font/font";
 import { gitlabmono } from "@/app/assets/font/font";
 import { Inter } from "next/font/google";
 import "highlight.js/styles/atom-one-dark.css";
+import ScheduleCallButton from "@/app/components/widgets/ScheduleCallButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,6 +60,7 @@ export default function AiLayout({
           <Providers>
             <NavBar />
             <main className="px-6 max-w-[45rem] mx-auto">{children}</main>
+            <ScheduleCallButton />
           </Providers>
         </body>
       </html>

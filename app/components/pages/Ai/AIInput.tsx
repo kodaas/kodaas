@@ -20,15 +20,14 @@ export function AIInput() {
 
   function getRandomPrompts() {
     const categories = Array.from(
-      new Set(SAMPLE_PROMPTS.map((p) => p.category))
+      new Set(SAMPLE_PROMPTS.map((p) => p.category)),
     );
     const selected = categories.map((category) => {
       const categoryPrompts = SAMPLE_PROMPTS.filter(
-        (p) => p.category === category
+        (p) => p.category === category,
       );
-      return categoryPrompts[
-        Math.floor(Math.random() * categoryPrompts.length)
-      ].text;
+      return categoryPrompts[Math.floor(Math.random() * categoryPrompts.length)]
+        .text;
     });
     return selected;
   }
@@ -117,7 +116,7 @@ export function AIInput() {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className="w-full flex-1 py-3 px-3 md:px-4 text-base border dark:border-zinc-400 border-zinc-600 rounded-full"
+          className="w-full flex-1 py-2 px-3 md:px-4 text-sm border dark:border-zinc-400 border-zinc-600 rounded-full"
           placeholder="Ask a question"
           disabled={isLoading}
         />
@@ -125,14 +124,14 @@ export function AIInput() {
         <button
           type="submit"
           disabled={isLoading || input.length === 0}
-          className="p-4 rounded-full bg-zinc-700 dark:bg-white text-white dark:text-zinc-700  shrink-0 text-base border dark:border-zinc-400 border-zinc-600 flex items-center justify-center"
+          className="p-3 rounded-full bg-zinc-700 dark:bg-white text-white dark:text-zinc-700  shrink-0 text-base border dark:border-zinc-400 border-zinc-600 flex items-center justify-center"
         >
           <FiSend />
         </button>
       </form>
 
-      <div className="w-full text-center text-xs dark:text-zinc-400 text-zinc-600 pt-1">
-        This AI can make mistakes. Check important info.
+      <div className="w-full text-center text-[0.7rem] dark:text-zinc-400 text-zinc-600 pt-1">
+        This AI can make mistakes. Check important info @ johnajala204@gmail.com
       </div>
     </Slide>
   );

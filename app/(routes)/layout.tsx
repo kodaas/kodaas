@@ -10,6 +10,7 @@ import { Providers } from "@/app/providers";
 import { incognito } from "@/app/assets/font/font";
 import { gitlabmono } from "@/app/assets/font/font";
 import { Inter } from "next/font/google";
+import ScheduleCallButton from "../components/widgets/ScheduleCallButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,6 +64,7 @@ export default function RootLayout({
           <main className="min-h-[50vh] max-w-[85rem] mx-auto md:px-16 px-5 pt-16 md:pt-44 space-y-32">
             {children}
           </main>
+          <ScheduleCallButton />
           <Footer />
         </Providers>
       </body>
