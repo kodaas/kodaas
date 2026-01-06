@@ -8,7 +8,7 @@ import { PortableText } from "@portabletext/react";
 import type { Metadata } from "next";
 import RefLink from "@/app/components/shared/RefLink";
 import Heroes from "@/app/components/pages/Heroes";
-import Usage from "@/app/components/pages/Usage";
+
 import { BiEnvelope, BiLinkExternal, BiSolidDownload } from "react-icons/bi";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
@@ -44,8 +44,7 @@ export default async function AboutPage() {
               <div className="order-2 lg:order-none">
                 <Slide>
                   <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
-                    Live 🛑 in {data.location}, {data.fullName}, building the
-                    future.
+                    {data.fullName}. Digital Craftsman & Systems Architect.
                   </h1>
 
                   <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
@@ -115,9 +114,9 @@ export default async function AboutPage() {
                 </Slide>
               </aside>
             </section>
-            <Slide delay={0.14}>
+            {/*<Slide delay={0.14}>
               <Usage />
-            </Slide>
+            </Slide>*/}
             <Heroes />
             <div className="flex mt-20 justify-evenly items-center max-w-3xl mx-auto">
               <Link

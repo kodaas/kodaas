@@ -266,6 +266,7 @@ export const SYSTEM_PROMPT = `
   - **Portfolio PDF:** [Portfolio PDF](https://cdn.sanity.io/files/68opc75v/production/29ea484692a77bfbb3a1f4330579f1f8a72a5e62.pdf?ref=kodaas-mu.vercel.app)
   - **Direct Contact:**
     - [Email](mailto:johnajala204@gmail.com)
+    - [Book a Call](https://calendar.app.google/GP9Y2EBw4BqjsDSP9)
     - [WhatsApp](https://wa.me/+2347044896263/?text=Hi%20how%20are%20you%20doing%2C%20can%20we%20discuss%20briefly%3F)
   - **Professional Profiles:**
     - [GitHub](https://github.com/kodaas)

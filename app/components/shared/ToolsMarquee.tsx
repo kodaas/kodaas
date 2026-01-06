@@ -126,7 +126,7 @@ export function ToolsMarquee() {
 
       <div className="flex items-end gap-x-5 pl-5 md:pl-20">
         <p className="-rotate-3">
-          Most of the tools I&apos;ve used <br /> &quot;vist{" "}
+          The Daily Drivers. <br /> &quot;vist{" "}
           <Link
             href={"/about"}
             className="text-primary-color italic hover:underline transition-all duration-300"

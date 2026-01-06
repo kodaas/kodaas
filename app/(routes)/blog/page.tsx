@@ -22,7 +22,7 @@ export default function BlogPage() {
     <main className="max-w-7xl mx-auto px-6 md:px-16 pt- pb-12">
       <PageHeading
         title="Blog"
-        description="Technical articles, tutorials, and thoughts on web development, design, and my journey as a developer."
+        description="A collection of technical deep dives, bug fixes, and things I learned the hard way. Basically, my external memory."
       />
       <Posts />
 

@@ -19,7 +19,7 @@ export default async function Job() {
       <Slide delay={0.16}>
         <div className="mb-16">
           <h2 className="font-incognito text-4xl mb-4 font-bold tracking-tight">
-            Work Experience
+            Track Record
           </h2>
         </div>
       </Slide>

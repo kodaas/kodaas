@@ -36,8 +36,8 @@ export default async function ProjectsPage() {
         <Availbility />
 
         <PageHeading
-          title="A glimpse into my craftmanship"
-          description="A curated showcase of some of my projects — highlighting continuous learning and growth. You're welcome to contribute; let’s grow and explore together!"
+          title="Selected Works."
+          description="A collection of production apps and experiments. Some are live, some are open-source. Feel free to peek at the code."
         />
       </div>
 
