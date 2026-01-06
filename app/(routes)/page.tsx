@@ -57,7 +57,7 @@ export default async function HomePage() {
             ))}
         </div>
 
-        <div className="w-full h-[400px] lg:absolute lg:top-0 lg:right-0 lg:w-[55%] lg:h-full z-10">
+        <div className="w-full h-[400px] cursor-grab lg:absolute lg:top-0 lg:right-0 lg:w-[55%] lg:h-full z-10">
           <Slide delay={0.14} className="w-full h-full">
             <ThreeMorph />
           </Slide>

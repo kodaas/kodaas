@@ -68,6 +68,55 @@ const generateGalaxy = (count: number) => {
   return points;
 };
 
+// Helper to generate a Double Helix (DNA-like) with volume
+const generateDoubleHelix = (count: number) => {
+  const points = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const t = (i / count) * Math.PI * 20; // 10 turns
+    const radius = RADIUS * 0.5;
+    const offset = i % 2 === 0 ? 0 : Math.PI; // Separate strands
+
+    // Add random scatter for volume
+    const scatterRadius = 0.2;
+    const r = Math.random() * scatterRadius;
+    const angle = Math.random() * Math.PI * 2;
+
+    const baseX = radius * Math.cos(t + offset);
+    const baseY = (i / count - 0.5) * RADIUS * 3; // Height
+    const baseZ = radius * Math.sin(t + offset);
+
+    points[i * 3] = baseX + r * Math.cos(angle);
+    points[i * 3 + 1] = baseY + r * Math.sin(angle);
+    points[i * 3 + 2] = baseZ + r * Math.sin(angle); // Simple scatter
+  }
+  return points;
+};
+
+// Helper to generate a Trefoil Knot with volume
+const generateTrefoilKnot = (count: number) => {
+  const points = new Float32Array(count * 3);
+  for (let i = 0; i < count; i++) {
+    const t = (i / count) * Math.PI * 2;
+    const x = Math.sin(t) + 2 * Math.sin(2 * t);
+    const y = Math.cos(t) - 2 * Math.cos(2 * t);
+    const z = -Math.sin(3 * t);
+
+    // Add random scatter for volume
+    const scatterRadius = 0.4;
+    const r = Math.random() * scatterRadius;
+    const angle = Math.random() * Math.PI * 2;
+
+    // Scale it down significantly
+    const scale = RADIUS * 0.4;
+    points[i * 3] = (x + r * Math.cos(angle)) * scale;
+    points[i * 3 + 1] = (y + r * Math.sin(angle)) * scale;
+    points[i * 3 + 2] = (z + r * Math.sin(angle)) * scale;
+  }
+  return points;
+};
+
+
+
 const MorphParticles = () => {
   const mesh = useRef<THREE.Points>(null);
   const [currentShape, setCurrentShape] = useState(0);
@@ -78,10 +127,12 @@ const MorphParticles = () => {
   const cube = useMemo(() => generateCube(PARTICLE_COUNT), []);
   const torus = useMemo(() => generateTorus(PARTICLE_COUNT), []);
   const galaxy = useMemo(() => generateGalaxy(PARTICLE_COUNT), []);
+  const doubleHelix = useMemo(() => generateDoubleHelix(PARTICLE_COUNT), []);
+  const trefoil = useMemo(() => generateTrefoilKnot(PARTICLE_COUNT), []);
 
   const shapes = useMemo(
-    () => [sphere, cube, torus, galaxy],
-    [sphere, cube, torus, galaxy],
+    () => [sphere, doubleHelix, cube, trefoil, torus, galaxy],
+    [sphere, doubleHelix, cube, trefoil, torus, galaxy],
   );
 
   // Current particles position
