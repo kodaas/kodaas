@@ -28,7 +28,7 @@ export default function BlogPage() {
 
       <Link
         href={"/gallery"}
-        className="font-incognito w-full flex items-center justify-center gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
+        className="font-incognito w-full flex items-center justify-center mt-5 gap-2 dark:text-white text-zinc-600 dark:focus:text-primary-color focus:text-secondary-color  dark:hover:text-primary-color hover:text-secondary-color duration-300 text-base"
       >
         My Gallery <GoArrowRight />
       </Link>

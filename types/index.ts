@@ -105,6 +105,7 @@ export type PostType = {
   body: PortableTextBlock[];
   featured: boolean;
   isPublished: boolean;
+  related?: PostType[];
 };
 
 export type HeroeType = {

@@ -14,7 +14,7 @@ import { Availbility } from "../components/shared/Availability";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
 import { Testimonials } from "../components/pages/Testimonials";
-import HeroBrainSvg from "../assets/icons/HeroBrainSvg";
+import ThreeMorph from "../components/ThreeMorph";
 
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
@@ -29,34 +29,39 @@ export default async function HomePage() {
 
   return (
     <>
-      <section className="flex xl:flex-row flex-col xl:items-center items-start xl:justify-center justify-between gap-x-20 md:pt-14">
-        {profile &&
-          profile.map((data) => (
-            <div key={data._id} className="lg:max-w-2xl max-w-2xl">
-              <Slide>
-                <Availbility />
-                <h1 className="font-incognito font-semibold tracking-tight text-3xl sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full">
-                  {data.headline}
-                </h1>
-                <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
-                  Hi, I&apos;m{" "}
-                  <Link
-                    href="/ai"
-                    className="text-primary-color hover:underline text-lg italic font-incognito"
-                  >
-                    {data.fullName}
-                  </Link>{" "}
-                  (Fiyin), {data.shortBio}
-                </p>
-              </Slide>
-              <Slide delay={0.1}>
-                <Social type="social" />
-              </Slide>
-            </div>
-          ))}
-        <Slide delay={0.14} className="flex items-center justify-center w-full h-full">
-          <HeroBrainSvg />
-        </Slide>
+      <section className="relative w-full lg:h-[60vh] flex flex-col lg:flex-row items-center overflow-hidden">
+        <div className="container mx-auto pt-12 lg:py-0 lg:h-full flex items-center relative z-0">
+          {profile &&
+            profile.map((data) => (
+              <div key={data._id} className="lg:max-w-2xl max-w-xl">
+                <Slide>
+                  <Availbility />
+                  <h1 className="font-incognito font-semibold tracking-tight text-3xl sm:text-5xl mb-6 lg:leading-[3.7rem] leading-tight lg:min-w-[700px] min-w-full">
+                    {data.headline}
+                  </h1>
+                  <p className="text-base dark:text-zinc-400 text-zinc-600 leading-relaxed">
+                    Hi, I&apos;m{" "}
+                    <Link
+                      href="/ai"
+                      className="text-primary-color hover:underline text-lg italic font-incognito"
+                    >
+                      {data.fullName}
+                    </Link>{" "}
+                    (Fiyin), {data.shortBio}
+                  </p>
+                </Slide>
+                <Slide delay={0.1}>
+                  <Social type="social" />
+                </Slide>
+              </div>
+            ))}
+        </div>
+
+        <div className="w-full h-[400px] lg:absolute lg:top-0 lg:right-0 lg:w-[55%] lg:h-full z-10">
+          <Slide delay={0.14} className="w-full h-full">
+            <ThreeMorph />
+          </Slide>
+        </div>
       </section>
 
       <Slide delay={0.16}>

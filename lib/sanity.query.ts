@@ -131,6 +131,20 @@ export const singlePostQuery = groq`*[_type == "Post" && slug.current == $slug][
     },
     twitterUrl
   },
+  "related": related[]-> {
+     _id,
+     title,
+     slug,
+     description,
+     coverImage {
+      "image": asset->url,
+      "lqip": asset->metadata.lqip,
+      alt,
+    },
+    date,
+    featured, 
+    isPublished 
+  },
   body,
 }`;
 

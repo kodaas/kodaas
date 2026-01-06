@@ -3,6 +3,8 @@ import ShareWidget from "../widgets/ShareWidget";
 import Image from "next/image";
 import { HiHashtag } from "react-icons/hi";
 
+import { PostType } from "@/types";
+
 type Props = {
     slug: string;
     title: string;
@@ -15,9 +17,10 @@ type Props = {
         };
         twitterUrl: string;
     };
+    relatedPosts?: PostType[];
 };
 
-export default function Sidebar({ slug, title, tags, author }: Props) {
+export default function Sidebar({ slug, title, tags, author, relatedPosts }: Props) {
     return (
         <aside className="space-y-12">
             {/* Written By */}
@@ -29,7 +32,7 @@ export default function Sidebar({ slug, title, tags, author }: Props) {
                     <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border dark:border-zinc-700 border-zinc-200">
                         <Image
                             src={author.photo.image}
-                            alt={author.photo.alt}
+                            alt={author.photo.alt || author.name}
                             fill
                             className="object-cover"
                         />
@@ -42,7 +45,7 @@ export default function Sidebar({ slug, title, tags, author }: Props) {
                             rel="noreferrer"
                             className="text-xs text-primary-color hover:underline"
                         >
-                            @fiyinfoluwa
+                            @kodaas
                         </a>
                     </div>
                 </div>
@@ -69,7 +72,7 @@ export default function Sidebar({ slug, title, tags, author }: Props) {
             )}
 
             <ShareWidget slug={slug} title={title} />
-            <FeaturedPosts params={slug} />
+            <FeaturedPosts params={slug} posts={relatedPosts} />
         </aside>
     );
 }

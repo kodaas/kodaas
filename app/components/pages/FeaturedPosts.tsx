@@ -4,24 +4,31 @@ import { postsQuery } from "@/lib/sanity.query";
 import type { PostType } from "@/types";
 import { sanityFetch } from "@/lib/sanity.client";
 
-export default async function FeaturedPosts({ params }: { params?: string }) {
-  const featuredPosts: PostType[] = await sanityFetch({
-    query: postsQuery,
-    tags: ["Post"],
-  });
+export default async function FeaturedPosts({
+  params,
+  posts,
+}: {
+  params?: string;
+  posts?: PostType[];
+}) {
+  const featuredPosts: PostType[] =
+    posts ||
+    (await sanityFetch({
+      query: postsQuery,
+      tags: ["Post"],
+    }));
 
   return (
     <div className="flex flex-col gap-6">
       <h3 className="text-sm font-bold uppercase tracking-wider dark:text-zinc-400 text-zinc-600">
-        Featured Posts
+        {posts ? "Related Posts" : "Featured Posts"}
       </h3>
       <div className="flex flex-col gap-6">
         {featuredPosts.slice(0, 3).map((post) =>
-          post.featured !== true || post.isPublished !== true ? null : (
+          post.isPublished !== true ? null : (
             <article
               key={post._id}
-              className={`${post.slug === params ? "hidden" : "flex flex-col"
-                }`}
+              className={`${post.slug === params ? "hidden" : "flex flex-col"}`}
             >
               <Link
                 href={`/blog/${post.slug}`}

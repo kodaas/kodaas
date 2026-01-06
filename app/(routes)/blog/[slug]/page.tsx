@@ -8,13 +8,7 @@ import { notFound } from "next/navigation";
 import { CustomPortableText } from "@/app/components/shared/CustomPortableText";
 import { sanityFetch } from "@/lib/sanity.client";
 import { formatDate, readTime } from "@/app/utils";
-import {
-  BiTime,
-  BiCalendar,
-  BiUser,
-  BiChat,
-  BiChevronRight,
-} from "react-icons/bi";
+import { BiTime, BiCalendar, BiChat, BiChevronRight } from "react-icons/bi";
 import { toPlainText } from "@portabletext/react";
 import ScrollProgressBar from "@/app/components/shared/ScrollProgressBar";
 import Sidebar from "@/app/components/shared/Sidebar";
@@ -42,13 +36,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Blog`,
     description: post.description,
+    keywords: post.tags,
     openGraph: {
       images:
         post.coverImage?.image ||
-        "https://res.cloudinary.com/victoreke/image/upload/v1692608339/victoreke/blog.webp",
+        "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/blog-og",
       title: post.title,
       description: post.description,
+      type: "article",
+      url: `https://kodaas.com/blog/${slug}`,
+      publishedTime: post.date || post._createdAt,
+      modifiedTime: post._updatedAt || post.date || post._createdAt,
+      authors: [post.author.name],
+      tags: post.tags,
     },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [
+        post.coverImage?.image ||
+        "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/blog-og",
+      ],
+      creator: "@kodaas",
+    },
+    alternates: {
+      canonical: `https://kodaas.com/blog/${slug}`,
+    },
+    publisher: "Kodaas",
+    authors: [{ name: post.author.name, url: post.author.twitterUrl }],
   };
 }
 
@@ -66,6 +82,40 @@ export default async function SinglePost({ params }: Props) {
 
   return (
     <main className="max-w-7xl mx-auto px-6 md:px-16 pb-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.title,
+            image:
+              post.coverImage?.image ||
+              "https://res.cloudinary.com/dceeaha7i/image/upload/f_webp,fl_awebp,q_auto/v1735727807/blog-og",
+            datePublished: post.date || post._createdAt,
+            dateModified: post._updatedAt || post.date || post._createdAt,
+            author: {
+              "@type": "Person",
+              name: post.author.name,
+              url: post.author.twitterUrl,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "Kodaas",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://kodaas.com/logo.png", // Replace with actual logo URL if available
+              },
+            },
+            description: post.description,
+            keywords: post.tags,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://kodaas.com/blog/${slug}`,
+            },
+          }),
+        }}
+      />
       <ScrollProgressBar />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-12">
@@ -111,18 +161,6 @@ export default async function SinglePost({ params }: Props) {
                 <BiTime className="text-lg" />
                 <span>{readTime(toPlainText(post.body))}</span>
               </div>
-
-              <div className="flex items-center gap-x-2">
-                <BiUser className="text-lg" />
-                <a
-                  href={post.author.twitterUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="hover:text-primary-color transition-colors"
-                >
-                  {post.author.name}
-                </a>
-              </div>
             </div>
           </div>
 
@@ -143,12 +181,6 @@ export default async function SinglePost({ params }: Props) {
           <div className="mt-8 dark:text-zinc-300 text-zinc-700 leading-relaxed portable-text">
             <PortableText value={post.body} components={CustomPortableText} />
           </div>
-
-          <div className="mt-12">
-            <Buymeacoffee />
-          </div>
-
-          <Comments />
         </div>
 
         {/* Sidebar */}
@@ -159,8 +191,18 @@ export default async function SinglePost({ params }: Props) {
               title={post.title}
               tags={post.tags}
               author={post.author}
+              relatedPosts={post.related}
             />
           </div>
+        </div>
+
+        {/* Footer Content */}
+        <div className="col-span-1 lg:col-span-2">
+          <div className="mt-12">
+            <Buymeacoffee />
+          </div>
+
+          <Comments />
         </div>
       </div>
     </main>

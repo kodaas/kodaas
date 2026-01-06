@@ -82,6 +82,13 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "related",
+      title: "Related Posts",
+      type: "array",
+      description: "Add related posts for this article",
+      of: [{ type: "reference", to: [{ type: "Post" }] }],
+    }),
+    defineField({
       name: "author",
       title: "Author",
       type: "reference",
