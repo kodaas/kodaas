@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { incognito } from "./assets/font/font";
 import { gitlabmono } from "./assets/font/font";
 import { Inter } from "next/font/google";
+import ScheduleCallButton from "./components/widgets/ScheduleCallButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -115,6 +116,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <ScheduleCallButton />
       </body>
     </html>
   );
