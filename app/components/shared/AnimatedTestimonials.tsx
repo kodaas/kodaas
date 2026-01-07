@@ -67,6 +67,7 @@ export const AnimatedTestimonials = ({
                       ? 999
                       : testimonials.length + 2 - index,
                     y: isActive(index) ? [0, -80, 0] : 0,
+                    x: 0,
                   }}
                   exit={{
                     opacity: 0,
@@ -79,6 +80,19 @@ export const AnimatedTestimonials = ({
                     ease: "easeInOut",
                   }}
                   className="absolute z-0 inset-0 origin-bottom"
+                  style={{ touchAction: "none" }}
+                  drag={isActive(index) ? "x" : false}
+                  dragElastic={1}
+                  dragConstraints={{ left: 0, right: 0 }}
+                  onDragEnd={(_, info) => {
+                    const offset = info.offset.x;
+                    const velocity = info.velocity.x;
+                    if (offset < -100 || velocity < -500) {
+                      handleNext();
+                    } else if (offset > 100 || velocity > 500) {
+                      handlePrev();
+                    }
+                  }}
                 >
                   <Image
                     src={testimonial.profileImage.image}
