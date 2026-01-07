@@ -1,3 +1,4 @@
+import { PhoneCall } from "lucide-react";
 import {
   BiEnvelope,
   BiLogoGithub,
@@ -228,6 +229,13 @@ export const SOCIALS_LINKS = [
   //   icon: BiLogoStackOverflow,
   //   status: "social",
   // },
+  {
+    id: 11,
+    name: "Book a Call",
+    url: "https://calendar.app.google/GP9Y2EBw4BqjsDSP9",
+    icon: PhoneCall,
+    status: "social",
+  },
 ];
 
 export const CUSTOM_THEME = {

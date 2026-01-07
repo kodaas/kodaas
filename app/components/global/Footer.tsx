@@ -72,7 +72,7 @@ export function Footer() {
             rel="noreferrer noopener"
           >
             <BiLogoGithub />
-            Last Updated <em className="text-primary-color not-italic">2025</em>
+            Last Updated <em className="text-primary-color not-italic">2026</em>
           </a>
 
           <small className="text-zinc-500">
