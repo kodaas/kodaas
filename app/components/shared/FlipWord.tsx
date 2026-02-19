@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, m } from "motion/react";
 import { cn } from "@/app/utils";
 
 export const FlipWords = ({
@@ -35,7 +35,7 @@ export const FlipWords = ({
         setIsAnimating(false);
       }}
     >
-      <motion.div
+      <m.div
         initial={{
           opacity: 0,
           y: 10,
@@ -65,7 +65,7 @@ export const FlipWords = ({
       >
         {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
         {currentWord.split(" ").map((word, wordIndex) => (
-          <motion.span
+          <m.span
             key={word + wordIndex}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -76,7 +76,7 @@ export const FlipWords = ({
             className="inline-block whitespace-nowrap"
           >
             {word.split("").map((letter, letterIndex) => (
-              <motion.span
+              <m.span
                 key={word + letterIndex}
                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -87,12 +87,12 @@ export const FlipWords = ({
                 className="inline-block"
               >
                 {letter}
-              </motion.span>
+              </m.span>
             ))}
             <span className="inline-block">&nbsp;</span>
-          </motion.span>
+          </m.span>
         ))}
-      </motion.div>
+      </m.div>
     </AnimatePresence>
   );
 };

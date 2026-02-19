@@ -119,6 +119,7 @@ export default async function Project({
             <Image
               className="rounded-xl object-top border dark:border-zinc-800 border-zinc-100 object-cover group-hover:scale-105 transition-transform duration-300"
               fill
+              sizes="(max-width: 768px) 100vw, 768px"
               src={project.coverImage?.image ?? fallbackImage}
               alt={project.coverImage?.alt ?? project.name}
               quality={100}
@@ -144,9 +145,9 @@ export default async function Project({
             {project.tools && project.tools.length > 0 && (
               <div className="flex items-center justify-end gap-2">
                 <div className="flex flex-wrap items-center justify-end gap-2">
-                  {project.tools.map((tool, index) => (
+                  {project.tools.map((tool) => (
                     <RefLink
-                      key={index}
+                      key={tool.name}
                       href={tool.url}
                       target="_blank"
                       className="flex items-center gap-2 px-3 py-1 text-sm transition-colors dark:bg-primary-bg bg-secondary-bg rounded-full dark:hover:bg-zinc-800 hover:bg-zinc-200"

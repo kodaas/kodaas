@@ -14,6 +14,7 @@ import ScrollProgressBar from "@/app/components/shared/ScrollProgressBar";
 import Sidebar from "@/app/components/shared/Sidebar";
 import Buymeacoffee from "@/app/components/shared/Buymeacoffee";
 import Comments from "@/app/components/widgets/Comments";
+import Script from "next/script";
 
 type Props = {
   params: Promise<{
@@ -82,8 +83,10 @@ export default async function SinglePost({ params }: Props) {
 
   return (
     <main className="max-w-7xl mx-auto px-6 md:px-16 pb-12">
-      <script
+      <Script
+        id="blog-jsonld"
         type="application/ld+json"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
@@ -117,6 +120,7 @@ export default async function SinglePost({ params }: Props) {
         }}
       />
       <ScrollProgressBar />
+
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-x-12 gap-y-12">
         {/* Main Content */}
@@ -170,6 +174,7 @@ export default async function SinglePost({ params }: Props) {
                 src={post.coverImage.image}
                 alt={post.coverImage.alt || post.title}
                 fill
+                sizes="(max-width: 1024px) 100vw, 66vw"
                 className="object-cover"
                 placeholder={post.coverImage.lqip ? "blur" : "empty"}
                 blurDataURL={post.coverImage.lqip}

@@ -1,6 +1,11 @@
 import React from 'react';
 import ThreeMorph from '../components/ThreeMorph';
 
+export const metadata = {
+  title: "Particle Morph Test",
+  description: "Interactive 3D particle morphing visualization.",
+};
+
 export default function MorphTestPage() {
     return (
         <main className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-black p-8 transition-colors duration-300">

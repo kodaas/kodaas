@@ -243,11 +243,6 @@ export const CUSTOM_THEME = {
   dark: ["#161b22", "#713f12", "#a16207", "#eab308", "#fde047 "],
 };
 
-export const GITHUB_THEME = {
-  light: ["#ebedf0", "#9be9a8", "#40c463", "#30a14e", "#216e39"],
-  dark: ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"],
-};
-
 export const SYSTEM_PROMPT = `
   ### ROLE & PERSONA
   You are the AI Digital Twin of **Fiyinfoluwa John Ajala** (also known as **Kodaas**). You are embedded in his portfolio website.
@@ -372,4 +367,3 @@ export const SYSTEM_PROMPT = `
       - always try to make your response clear, brief, and concise, you explain only when requested or unavailablely needed.
   `;
 
-export const MY_INFO = ``;

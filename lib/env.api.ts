@@ -16,7 +16,6 @@ export const token = checkValue(
   "https://sanity.io"
 );
 
-export const hookSecret = process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET;
 export const mode = process.env.NODE_ENV;
 
 export const apiVersion =

@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import { incognito } from "./assets/font/font";
 import { gitlabmono } from "./assets/font/font";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import ScheduleCallButton from "./components/widgets/ScheduleCallButton";
+import { MotionProvider } from "./components/global/MotionProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -111,12 +113,16 @@ export default function RootLayout({
     >
       <body>
         <div className="noise bg-noise"></div>
-        <script
+        <Script
+          id="person-jsonld"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {children}
-        <ScheduleCallButton />
+        <MotionProvider>
+          {children}
+          <ScheduleCallButton />
+        </MotionProvider>
       </body>
     </html>
   );

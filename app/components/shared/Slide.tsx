@@ -1,6 +1,6 @@
 "use client";
-import { motion, useInView, useAnimation } from "motion/react";
-import { useRef, useEffect } from "react";
+import { m } from "motion/react";
+import { useRef } from "react";
 
 type props = {
   children: React.ReactNode;
@@ -10,17 +10,9 @@ type props = {
 
 export const Slide = ({ children, className, delay }: props) => {
   const ref = useRef(null);
-  const isInview = useInView(ref, { once: true });
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (isInview) {
-      controls.start("stop");
-    }
-  }, [controls, isInview]);
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       variants={{
         start: { opacity: 0, translateY: 10 },
@@ -32,11 +24,12 @@ export const Slide = ({ children, className, delay }: props) => {
         delay: delay,
         stiffness: 0.5,
       }}
-      animate={controls}
+      whileInView="stop"
+      viewport={{ once: true }}
       initial="start"
       className={className}
     >
       {children}
-    </motion.div>
+    </m.div>
   );
 };

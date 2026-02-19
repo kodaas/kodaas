@@ -34,6 +34,7 @@ export default function Sidebar({ slug, title, tags, author, relatedPosts }: Pro
                             src={author.photo.image}
                             alt={author.photo.alt || author.name}
                             fill
+                            sizes="48px"
                             className="object-cover"
                         />
                     </div>

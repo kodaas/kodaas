@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import YearButton from "../shared/YearButton";
 import EmptyState from "../shared/EmptyState";
 import GitHubCalendar from "react-github-calendar";
@@ -12,17 +12,8 @@ export default function ContributionGraph() {
     undefined,
   );
   const { theme, systemTheme } = useTheme();
-  const [serverTheme, setServerTheme] = useState<"light" | "dark" | undefined>(
-    undefined,
-  );
   const scheme =
     theme === "light" ? "light" : theme === "dark" ? "dark" : systemTheme;
-
-  // Set theme only after rendering to avoid mismatch between client and server
-  // https://github.com/vercel/next.js/issues/10608#issuecomment-589073831
-  useEffect(() => {
-    setServerTheme(scheme);
-  }, [scheme]);
 
   const today = new Date().getFullYear();
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
@@ -43,7 +34,7 @@ export default function ContributionGraph() {
         <GitHubCalendar
           username={username}
           theme={CUSTOM_THEME}
-          colorScheme={serverTheme}
+          colorScheme={scheme}
           blockSize={13}
           year={calendarYear ?? today}
         />

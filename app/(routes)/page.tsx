@@ -16,6 +16,11 @@ import { GoArrowRight } from "react-icons/go";
 import { Testimonials } from "../components/pages/Testimonials";
 import ThreeMorph from "../components/ThreeMorph";
 
+export const metadata = {
+  title: "Fiyinfoluwa John Ajala | Software Developer & AI Engineer",
+  description: "Fiyinfoluwa John Ajala (Kodaas) is a Software Developer and Generative AI Engineer specializing in Full Stack Architecture, LLMOps, and RAG pipelines.",
+};
+
 export default async function HomePage() {
   const profile: ProfileType[] = await sanityFetch({
     query: profileQuery,

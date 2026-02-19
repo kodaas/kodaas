@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "motion/react";
+import { m } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -49,15 +49,15 @@ export function ToolsMarquee() {
   return (
     <section className="overflow-x-hidden py-10 space-y-16">
       <div className="flex gap-20">
-        <motion.div
+        <m.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ duration, repeat: Infinity, ease: "linear" }}
           className="flex gap-20 shrink-0"
         >
-          {logosTop.map((url, index) => (
+          {logosTop.map((url) => (
             <Image
-              key={`${url}-${index}`}
+              key={url}
               src={`/logos/${url}`}
               width={size}
               height={size}
@@ -65,17 +65,17 @@ export function ToolsMarquee() {
               className="dark:opacity-75 opacity-85"
             />
           ))}
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
           transition={{ duration, repeat: Infinity, ease: "linear" }}
           className="flex gap-20 shrink-0"
         >
-          {logosTop.map((url, index) => (
+          {logosTop.map((url) => (
             <Image
-              key={`${url}-${index}`}
+              key={url}
               src={`/logos/${url}`}
               width={size}
               height={size}
@@ -83,19 +83,19 @@ export function ToolsMarquee() {
               className="dark:opacity-75 opacity-85"
             />
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="flex gap-20">
-        <motion.div
+        <m.div
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration, repeat: Infinity, ease: "linear" }}
           className="flex gap-20 shrink-0"
         >
-          {logosBottom.map((url, index) => (
+          {logosBottom.map((url) => (
             <Image
-              key={`${url}-${index}`}
+              key={url}
               src={`/logos/${url}`}
               width={size}
               height={size}
@@ -103,17 +103,17 @@ export function ToolsMarquee() {
               className="dark:opacity-75 opacity-85"
             />
           ))}
-        </motion.div>
+        </m.div>
 
-        <motion.div
+        <m.div
           initial={{ x: "-100%" }}
           animate={{ x: 0 }}
           transition={{ duration, repeat: Infinity, ease: "linear" }}
           className="flex gap-20 shrink-0"
         >
-          {logosBottom.map((url, index) => (
+          {logosBottom.map((url) => (
             <Image
-              key={`${url}-${index}`}
+              key={url}
               src={`/logos/${url}`}
               width={size}
               height={size}
@@ -121,7 +121,7 @@ export function ToolsMarquee() {
               className="dark:opacity-75 opacity-85"
             />
           ))}
-        </motion.div>
+        </m.div>
       </div>
 
       <div className="flex items-end gap-x-5 pl-5 md:pl-20">

@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+
 export default function Buymeacoffee() {
   return (
     <a
@@ -8,11 +9,13 @@ export default function Buymeacoffee() {
       rel="noreferrer noopener"
     >
       Do you feel like supporting my work? 🙂
-      <img
+      <Image
         className="grayscale group-hover:grayscale-0 duration-300"
         alt="Buymeacoffee button"
-        loading="lazy"
         src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=kodaas&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+        width={217}
+        height={60}
+        unoptimized
       />
     </a>
   );

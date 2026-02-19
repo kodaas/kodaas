@@ -3,7 +3,7 @@ import Link from "next/link";
 import Theme from "./Theme";
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { motion, useMotionValueEvent, useScroll } from "motion/react";
+import { m, useMotionValueEvent, useScroll } from "motion/react";
 import { useWindowSize } from "@uidotdev/usehooks";
 import { MOBILE_SCREEN } from "@/app/constant";
 import { usePathname } from "next/navigation";
@@ -53,7 +53,7 @@ export function NavBar() {
   const isMobile = width !== null && width <= MOBILE_SCREEN;
 
   return (
-    <motion.div
+    <m.div
       animate={hidden ? "hidden" : "visible"}
       whileHover="visible"
       onFocusCapture={() => setHidden(false)}
@@ -102,6 +102,6 @@ export function NavBar() {
 
         <Theme />
       </nav>
-    </motion.div>
+    </m.div>
   );
 }

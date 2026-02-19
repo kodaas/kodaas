@@ -35,9 +35,9 @@ export default function Table({ value }: { value: TableValueProps }) {
         </tr>
       </thead>
       <tbody>
-        {tableBody.map((row, index) => (
+        {tableBody.map((row) => (
           <tr
-            key={index}
+            key={row.join("-")}
             className="divide-x divide-zinc-200 dark:divide-zinc-800 border dark:border-zinc-800 border-zinc-200"
           >
             {row.map((cell) => (

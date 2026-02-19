@@ -8,7 +8,7 @@ import { ClientMessage } from "@/app/actions";
 import { nanoid } from "nanoid";
 import { useAIStore } from "@/app/store/ai";
 import { IoIosAddCircleOutline } from "react-icons/io";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence, m } from "motion/react";
 
 export function AIInput() {
   const [input, setInput] = useState("");
@@ -74,9 +74,9 @@ export function AIInput() {
 
   return (
     <Slide delay={0.2} className="space-y-1 w-full">
-      <div className="flex w-full py-2 gap-3 overflow-auto no-scrollbar min-h-[40px]">
+      <div suppressHydrationWarning className="flex w-full py-2 gap-3 overflow-auto no-scrollbar min-h-[40px]">
         <AnimatePresence mode="wait">
-          <motion.div
+          <m.div
             key={animationKey}
             initial={{ opacity: 0, y: 5 }}
             animate={{ opacity: 1, y: 0 }}
@@ -84,9 +84,9 @@ export function AIInput() {
             transition={{ duration: 0.3 }}
             className="flex gap-3 min-w-max"
           >
-            {samplePrompts.map((question, index) => (
+            {samplePrompts.map((question) => (
               <button
-                key={index}
+                key={question}
                 disabled={isLoading}
                 onClick={() => handleSugestedPrompt(question)}
                 className="text-xs dark:text-zinc-400 text-zinc-600 leading-relaxed border dark:border-zinc-400 border-zinc-600 px-2 rounded-full shrink-0"
@@ -94,7 +94,7 @@ export function AIInput() {
                 {question}
               </button>
             ))}
-          </motion.div>
+          </m.div>
         </AnimatePresence>
       </div>
 

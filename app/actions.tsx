@@ -22,6 +22,22 @@ export interface ClientMessage {
 }
 
 export async function continueConversation(input: string) {
+  if (!input || typeof input !== "string" || input.trim().length === 0) {
+    return {
+      id: nanoid(10),
+      role: "error",
+      display: <div>Please enter a valid message.</div>,
+    };
+  }
+
+  if (input.length > 2000) {
+    return {
+      id: nanoid(10),
+      role: "error",
+      display: <div>Message is too long. Please keep it under 2000 characters.</div>,
+    };
+  }
+
   const history = getMutableAIState();
   // const converter = new showdown.Converter();
 

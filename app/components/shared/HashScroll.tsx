@@ -11,18 +11,6 @@ type props = {
 //   header.scrollIntoView({ behavior: "smooth" });
 // };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const slugify = (id: any) => {
-  if (id) {
-    id.toString()
-      .toLowerCase()
-      .replaceAll(/[^-\w]+/g, "-")
-      .replaceAll(/--+/g, "-")
-      .replace(/^-|-$/g, "");
-  }
-  return "";
-};
-
 export default function HashScroll({ text, event }: props) {
   return (
     <Link
